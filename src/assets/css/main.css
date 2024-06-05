@@ -1,5 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.home-media--wrapper {
+  /* disable controling */
+  user-select: none;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.home-media--content {
+  width: 177.7777777778vh;
+  height: 100vh;
+}
 
 /*# sourceMappingURL=main.css.map */
