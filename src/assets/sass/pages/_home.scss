@@ -5,17 +5,20 @@
       user-select: none;
       pointer-events: none;
 
-      display: flex;
-      justify-content: center;
+      //   display: flex;
+      //   justify-content: center;
+
       overflow: hidden;
 
+      //   object-fit: cover;
+
       width: 100%;
-      height: calc(100vh);
+      height: 100vh;
     }
 
     &--content {
       width: calc(100vh * 16 / 9);
-      height: calc(100vh);
+      height: 100vh;
     }
   }
 }

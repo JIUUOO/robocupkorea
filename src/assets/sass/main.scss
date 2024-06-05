@@ -1,5 +1,8 @@
 @use "custom";
 
+@use "base/typography";
+@use "base/reset";
+
 @use "component/navbar";
 
 @use "pages/home";

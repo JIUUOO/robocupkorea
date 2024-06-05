@@ -1,9 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.max-w-8xl {
+  max-width: 92rem;
+}
+
 .navbar {
   position: fixed;
-  top: -1rem;
 }
 
 .linear-draw {
@@ -14,8 +17,6 @@
   /* disable controling */
   user-select: none;
   pointer-events: none;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
   width: 100%;
   height: 100vh;

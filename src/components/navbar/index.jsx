@@ -9,8 +9,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className="bg-white navbar linear-draw w-screen"
-      style={{ top: (scrollY > 0 ? 0 : -5) + "rem" }}
+      className="bg-white navbar linear-draw w-screen z-10"
+      style={{ top: (scrollY > 0 ? 0 : -64) + "px" }}
     >
       <div className="mx-auto max-w-7xl">
         <div className="relative flex h-16 justify-between items-center">
