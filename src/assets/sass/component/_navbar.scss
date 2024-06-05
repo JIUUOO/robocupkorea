@@ -1,2 +1,8 @@
 .navbar {
+  position: fixed;
+  top: calc(-1rem);
+}
+
+.linear-draw {
+  transition: top 0.35s;
 }
