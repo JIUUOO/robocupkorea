@@ -2,6 +2,10 @@
   position: fixed;
 }
 
+.navbar-hidden {
+  top: -64px;
+}
+
 .linear-draw {
   transition: top 0.35s;
 }

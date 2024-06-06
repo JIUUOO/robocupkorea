@@ -1,5 +1,8 @@
 @use "custom";
 
+@use "abstracts/mixins";
+
+@use "base/base";
 @use "base/typography";
 @use "base/reset";
 

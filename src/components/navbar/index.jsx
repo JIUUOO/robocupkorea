@@ -1,16 +1,38 @@
-import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { useContext, useEffect, useRef } from "react";
 import { GlobalContext } from "../../context";
 
 import rckaLogo from "../../assets/images/logo/robocup-korea-association.png";
 
 export default function Navbar() {
-  const { scrollY } = useContext(GlobalContext);
+  const { scrollY, setScrollY, pathname } = useContext(GlobalContext);
+  const navbarRef = useRef(null);
 
+  useEffect(() => {
+    if (scrollY > 0) {
+      navbarRef.current.style.top = "0px";
+    } else {
+      navbarRef.current.style.top = "-64px";
+    }
+  });
+
+  // hide navbar after 3 sec
+  useEffect(() => {
+    navbarRef.current.style.top = "0px";
+    const timer = setTimeout(() => {
+      if (scrollY <= 0) {
+        navbarRef.current.style.top = "-64px"; // navbar hidden
+      }
+    }, 1700);
+    return () => clearTimeout(timer);
+  }, []);
+
+  //   console.log(location.pathname);
   return (
     <nav
-      className="bg-white navbar linear-draw w-screen z-10"
-      style={{ top: (scrollY > 0 ? 0 : -64) + "px" }}
+      className="bg-white navbar linear-draw w-screen z-10 linear-draw"
+      ref={navbarRef}
+      //   style={{ top: (scrollY > 0 ? 0 : -64) + "px" }}
     >
       <div className="mx-auto max-w-7xl">
         <div className="relative flex h-16 justify-between items-center">

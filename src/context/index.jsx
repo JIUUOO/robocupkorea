@@ -1,14 +1,17 @@
 import { createContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export const GlobalContext = createContext(null);
 
 export default function GlobalState({ children }) {
   const [scrollY, setScrollY] = useState(0);
+  let { pathname } = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -17,7 +20,7 @@ export default function GlobalState({ children }) {
   }, []);
 
   return (
-    <GlobalContext.Provider value={{ scrollY }}>
+    <GlobalContext.Provider value={{ scrollY, setScrollY, pathname }}>
       {children}
     </GlobalContext.Provider>
   );

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="max-w-7xl mx-auto mt-20 mb-4">
-        <div className="grid sm:grid-cols-3 mx-auto w-60 sm:w-auto max-w-6xl">
+        <div className="grid sm:grid-cols-3 mx-auto w-60 sm:w-auto">
           <img src={ministryLogo} className="h-11 sm:mx-auto"></img>
           <img src={serviceLogo} className="h-11 sm:mx-auto"></img>
           <img src={commissionLogo} className="h-11 sm:mx-auto"></img>
