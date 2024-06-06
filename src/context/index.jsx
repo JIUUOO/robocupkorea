@@ -17,7 +17,7 @@ export default function GlobalState({ children }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [window.scrollY]);
 
   return (
     <GlobalContext.Provider value={{ scrollY, pathname }}>

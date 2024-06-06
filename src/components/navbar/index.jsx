@@ -8,27 +8,18 @@ export default function Navbar() {
   const { scrollY, pathname } = useContext(GlobalContext);
   const navbarRef = useRef(null);
 
-  const navbarPos = () => {
-    if (scrollY > 0) {
-      navbarRef.current.style.top = "0px";
-    } else {
-      navbarRef.current.style.top = "-64px";
-    }
-  };
-
   // hide navbar after 3 sec
   useEffect(() => {
-    navbarPos();
+    if (pathname === "/") {
+      navbarRef.current.style.top = "0px";
+      const initTimer = setTimeout(() => {
+        navbarRef.current.style.top = "-64px"; // navbar hidden
+      }, 3700);
+
+      return () => clearTimeout(initTimer);
+    }
   }, [scrollY]);
 
-  useEffect(() => {
-    navbarRef.current.style.top = "0px";
-    const initTimer = setTimeout(() => {
-      navbarRef.current.style.top = "-64px"; // navbar hidden
-    }, 3700);
-
-    return () => clearTimeout(initTimer);
-  }, []);
   //   console.log(location.pathname);
   return (
     <nav
