@@ -5,7 +5,6 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   const scrollToTop = () => {
-    console.log("hey");
     window.scroll(0, 0);
     window.scroll({
       top: 0,
