@@ -20,7 +20,7 @@ export default function GlobalState({ children }) {
   }, []);
 
   return (
-    <GlobalContext.Provider value={{ scrollY, setScrollY, pathname }}>
+    <GlobalContext.Provider value={{ scrollY, pathname }}>
       {children}
     </GlobalContext.Provider>
   );

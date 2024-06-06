@@ -5,7 +5,7 @@ import { GlobalContext } from "../../context";
 import rckaLogo from "../../assets/images/logo/robocup-korea-association.png";
 
 export default function Navbar() {
-  const { scrollY, setScrollY, pathname } = useContext(GlobalContext);
+  const { scrollY, pathname } = useContext(GlobalContext);
   const navbarRef = useRef(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Navbar() {
       if (scrollY <= 0) {
         navbarRef.current.style.top = "-64px"; // navbar hidden
       }
-    }, 1700);
+    }, 3700);
     return () => clearTimeout(timer);
   }, []);
 
