@@ -4,3 +4,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin on-mobile {
+  @media (max-width: theme("screens.sm")) {
+    @content;
+  }
+}
+
+@mixin on-monitor {
+  @media (min-width: theme("screens.sm")) {
+    @content;
+  }
+}

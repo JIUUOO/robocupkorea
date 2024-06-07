@@ -15,121 +15,31 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
-        <div className="flex flex-col justify-center text-base">
+      <div className="container mx-auto p-5">
+        <div className="flex flex-col justify-center">
           <div>
+            <h2 className="text-2xl">한국로보컵협회는 어떤 단체인가요?</h2>
             <p>
-              start: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Eius a alias libero ad cumque eligendi delectus quidem explicabo
-              obcaecati, dolorum ipsam quos nisi totam ducimus ratione quia
-              sequi corporis laudantium. Consequuntur vero autem veritatis
-              consectetur culpa aliquid ut? Nihil aperiam, est maiores quia
-              voluptatum ducimus eligendi aut accusamus! Labore magni
-              repudiandae suscipit eum aspernatur error sed possimus nihil
-              impedit id! Odit, eos eius temporibus repudiandae iusto, fugit
-              ullam architecto obcaecati exercitationem unde mollitia ea. Harum
-              asperiores voluptates minus. Fugiat, asperiores tempora voluptatum
-              quia labore vitae nobis facere quidem omnis vero? Labore
-              temporibus ipsum quasi reprehenderit asperiores repudiandae ipsa
-              quae ipsam amet minima mollitia in rerum ab maxime voluptatibus,
-              architecto quisquam expedita porro earum quis cumque! Dicta
-              reprehenderit numquam ad iure. Aliquam molestias neque eius quod
-              esse consequatur quas hic eaque, recusandae explicabo,
-              voluptatibus eum ad doloremque nemo dicta id atque doloribus,
-              incidunt aut. Repudiandae ipsa fugit ab eligendi qui
-              exercitationem? Vitae atque dolorum iure sapiente illo dignissimos
-              perspiciatis perferendis, placeat debitis natus earum consectetur
-              iste architecto quod ea blanditiis maxime laboriosam consequuntur
-              fugiat molestiae. Enim alias nihil earum accusamus eos!
-              Doloremque, unde, nemo quas repudiandae at praesentium quaerat
-              aliquid est dolores magnam quidem, veritatis illo! Laudantium
-              numquam, voluptatibus dignissimos ratione deserunt iste officia
-              vero reprehenderit alias assumenda similique, voluptas optio!
-              Sapiente debitis accusamus quas quae est suscipit natus maiores
-              dolore, odit aliquam vitae! Est ad similique quis beatae. Fugit
-              sed aspernatur itaque asperiores numquam. Nam maxime fugiat
-              laborum ab. Quisquam. Nobis quia tempore nulla debitis facere.
-              Consectetur quod dignissimos numquam doloribus molestiae adipisci
-              deleniti ducimus tenetur, repellendus, odit ipsum atque! Nam,
-              sapiente? Molestias sed dolorem vel, mollitia praesentium enim
-              aperiam! Doloribus autem, deleniti quod animi officiis provident
-              nemo veritatis deserunt dolore delectus. Harum vero error aperiam
-              temporibus dignissimos doloribus laboriosam, unde ea consectetur
-              beatae magni odio, explicabo, est optio atque. Numquam nemo
-              deserunt distinctio fuga totam est minus eveniet dolore,
-              perferendis natus harum a. Cum accusantium eaque deserunt, velit
-              sit commodi ipsa laudantium architecto, cupiditate provident at
-              eveniet impedit asperiores? Molestiae velit dolorum, labore
-              nesciunt distinctio itaque fugit eveniet hic possimus repudiandae
-              eos nisi. Dicta sunt obcaecati deserunt dolore fuga molestias
-              corrupti officia, impedit eligendi fugiat sed facilis! Dicta, aut?
-              Consectetur eaque fuga earum, cupiditate debitis culpa aspernatur
-              exercitationem sequi expedita voluptates dignissimos illo animi
-              sit voluptate velit assumenda ea. Delectus ab ratione voluptas eum
-              sapiente ut reiciendis perferendis voluptatum! Recusandae odio
-              amet aperiam ut aliquam earum cumque. Aut blanditiis laboriosam
-              culpa, praesentium iste omnis debitis accusamus numquam placeat
-              quam, fuga fugit eos non repellendus ducimus eum earum ratione
-              reiciendis? Molestiae rerum et accusamus. Ad porro odio quae,
-              neque sequi illo. Magni, saepe repudiandae. Nulla accusamus fugiat
-              alias temporibus architecto, doloribus totam nemo quis porro quas?
-              Adipisci sapiente similique quos? Consequatur provident cupiditate
-              excepturi quaerat quo dolor temporibus, nam aut. Delectus
-              consequatur hic cumque veniam in commodi distinctio blanditiis
-              illum, animi, unde nulla pariatur. Eaque adipisci dolores nobis
-              iusto explicabo. Suscipit voluptatem voluptate, quo vel quos
-              voluptatum dicta consequatur ipsam corrupti cum mollitia dolore
-              consequuntur sint, nihil magnam pariatur quia, nobis explicabo
-              temporibus deleniti? Voluptates sequi recusandae ullam repellat
-              excepturi! Aut, quas inventore dolorum aliquid neque enim nihil
-              nemo sint laboriosam voluptatem nisi aperiam soluta distinctio
-              explicabo vero iure quibusdam vel, numquam harum labore similique
-              praesentium, reprehenderit quod laborum. Ut? Totam accusamus
-              dolorum, qui quidem maiores fugit ex quod aperiam aspernatur sunt
-              voluptatem mollitia fuga laborum sint tempore obcaecati. Voluptate
-              praesentium a tempore reiciendis, dignissimos laboriosam
-              distinctio voluptatibus facilis soluta. Labore vero beatae modi
-              quisquam illum id debitis harum minus dolore, animi molestiae,
-              facere nesciunt exercitationem enim ipsa, sed reprehenderit
-              excepturi quas corrupti nisi non doloremque pariatur dolorem! Cum,
-              maiores. Maiores dolor vel minima voluptate eligendi laudantium
-              facilis possimus rerum, excepturi doloremque culpa impedit
-              officiis! Laborum quisquam possimus laboriosam dolorum
-              praesentium! Mollitia amet dolorum nemo praesentium eaque facere
-              consequuntur blanditiis. Optio aspernatur voluptatem architecto
-              aperiam voluptatum sapiente assumenda nam? A deserunt aliquam
-              earum harum vitae at quaerat temporibus quis exercitationem
-              impedit fugit nemo qui, alias dolore. Quo a omnis quibusdam! Eius
-              cumque placeat neque harum quaerat qui dolor consectetur deserunt
-              molestiae? Aut, vel! Omnis, iusto ullam commodi inventore
-              reiciendis voluptatum. Velit atque sed ad, voluptate ab rerum ex
-              necessitatibus alias. Dignissimos aperiam quasi nobis laudantium
-              quaerat obcaecati nisi assumenda debitis cum asperiores explicabo
-              magni culpa facilis fugit corporis maxime enim soluta aliquid,
-              placeat quos ad rem est voluptas. Quis, culpa. Saepe deleniti,
-              aliquid laudantium praesentium consequuntur distinctio porro
-              similique debitis minima? Dolores corrupti veritatis nostrum,
-              excepturi recusandae dolor dolorum vel officiis, atque cupiditate
-              temporibus rem? Dignissimos doloremque eos a earum. Deserunt
-              delectus eligendi illo nihil eum itaque, molestias in ducimus, ut
-              perferendis necessitatibus vitae dolor libero, dolorem est quas
-              voluptatum quae quod neque corrupti quaerat ad! Deserunt quae
-              provident ullam. Fugit eligendi asperiores sunt, ipsa voluptas
-              possimus nostrum architecto expedita molestias, aspernatur ea
-              ducimus assumenda quaerat quasi! Dolorem quos aperiam repellat
-              veritatis tenetur sit velit, neque inventore nisi assumenda harum.
-              Eveniet atque error natus itaque aliquam, iste quibusdam
-              accusantium id quidem perferendis totam quae corrupti vero
-              possimus ea quaerat incidunt delectus debitis! Tempora numquam
-              veritatis architecto, officiis facere velit minus? Laudantium a
-              nesciunt perferendis at eum deleniti vero suscipit eveniet, esse
-              nulla incidunt pariatur optio veritatis sit, tempora ad unde,
-              quisquam quaerat illo quibusdam? Incidunt ipsa harum eveniet totam
-              ratione! Enim blanditiis, numquam mollitia, minus illum sed
-              voluptatem ipsum porro velit itaque a, nulla corrupti aut magnam?
-              Eaque quaerat reiciendis, assumenda quia neque quasi recusandae
-              veritatis fugit quidem illo accusantium.
+              한국로보컵협회(RCKA) 홈페이지를 방문해주신 여러분께 깊이
+              감사드립니다. 사단법인 한국로보컵협회(이하 RCKA)는 로봇을 연구하는
+              학생들을 위해 국가적 및 국제적 로봇 이벤트인 로보컵(Robocup)
+              리그를 주최하는 프로젝트 중심의 교육 증진 운동입니다. RCKA는 참된
+              로봇교육에 뜻을 같이 하는 교육관련 종사자와 자원봉사자들로 구성된
+              비영리 기관입니다. RCKA는 도전, 협동 및 경쟁 촉면 등 교육에 필요한
+              여러가지를 모두 제공합니다. 여러분의 끊임없는 격려와 관심으로
+              성원해주시길 부탁드립니다.
             </p>
+          </div>
+          <h2 className="text-2xl">로보컵 리그는 어떤 행사인가요?</h2>
+          <div>
+            로보컵 리그의 설립목적은 양질의 다양한 로봇교육 제공에 있습니다.
+            청소년 학생들의 경우 로보컵 리그를 통하여 여러 로봇분야-전자,
+            하드웨어, 소프트웨어 등-에 대한 기술능력을 직접 키울 수 있는 기회를
+            제공합니다. 아울러 친구들과 함께 기술을 공유하면서 팀워크에 대해
+            배울 수 있는 동기부여를 받고 특별한 경험을 할 수 있는 새로운 방법을
+            제시합니다. 로보컵 리그는 다양한 참가자들이 우수한 로봇개발이라는
+            공동의 목표를 달성할 수 있는 팀으로 함께 연구할 수 있는 기회를
+            제공합니다.
           </div>
         </div>
       </div>
