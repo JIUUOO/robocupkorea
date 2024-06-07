@@ -29,6 +29,9 @@
     }
 
     &--active {
+      display: flex;
+      flex-direction: row;
+
       @include on-mobile {
         position: absolute;
         left: 0%;

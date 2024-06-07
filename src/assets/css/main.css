@@ -31,6 +31,10 @@
     display: none;
   }
 }
+.navbar-menu-panel--active {
+  display: flex;
+  flex-direction: row;
+}
 @media (max-width: theme("screens.sm")) {
   .navbar-menu-panel--active {
     position: absolute;
