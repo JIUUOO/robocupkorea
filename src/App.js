@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/association/about" element={<About />} />
+        <Route path="/association/committee" element={<Committee />} />
         <Route path="/leagues/robocup-soccer" element={<Committee />} />
         <Route path="/leagues/robocup-rescue" element={<Committee />} />
         <Route path="/leagues/robocup-athome" element={<Committee />} />
