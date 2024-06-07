@@ -3,7 +3,7 @@
 @use "../abstracts/mixins" as *;
 
 .navbar {
-  position: fixed;
+  position: sticky;
   transition: top 0.5s;
   background: white;
   width: 100vw;
@@ -33,7 +33,7 @@
         position: absolute;
         left: 0%;
         top: 100%;
-        background: $secondary-color-active;
+        background: $white;
         height: calc(100vh - $navbar-height);
         width: 100vw;
 
@@ -43,6 +43,7 @@
     }
   }
 
+  // navbar-dropdown
   &-dropdown {
     &--toggle {
       position: relative;
@@ -52,43 +53,54 @@
       height: 3rem;
       padding: 0 0.5rem;
       font-weight: 500;
-
-      //   border-radius: 30px;
       cursor: default;
       border-radius: 8px;
       color: $primary-color;
 
-      &:hover {
-        background: rgba(0, 0, 0, 0.1);
-        color: $primary-color-active;
-        transition: background-color 0.5s;
-      }
-
-      @include on-mobile {
-        width: 100%;
-        justify-content: start;
-
+      @include on-monitor {
         &:hover {
           background: rgba(0, 0, 0, 0.1);
           color: $primary-color-active;
           transition: background-color 0.5s;
         }
       }
+
+      @include on-mobile {
+        width: 100%;
+        justify-content: start;
+        font-size: 1.15rem;
+      }
     }
 
     &--menu {
-      position: absolute;
-      top: 88%;
-      left: inherit;
-      width: auto;
-      padding: 0.5rem;
-      background-color: white;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 8px;
+      display: none;
+      color: $primary-color-active;
+
+      &-active {
+        @include on-monitor {
+          position: absolute;
+          top: 88%;
+          left: inherit;
+          width: auto;
+          padding: 0.5rem;
+          background-color: white;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 8px;
+        }
+      }
+
+      @include on-mobile {
+        display: block;
+      }
     }
 
     &--list {
       display: block;
+
+      @include on-mobile {
+        font-size: 1.15rem;
+        padding-left: 1rem;
+      }
     }
   }
 }
