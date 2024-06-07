@@ -6,11 +6,11 @@
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   transition: top 0.5s;
   background: white;
   width: 100vw;
-  z-index: 1;
+  z-index: 2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .navbar .mobile-button {
@@ -107,6 +107,15 @@
 .home-media {
   height: 100vh;
 }
+.home-media--panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 64px;
+  background: #ffffff;
+  z-index: 1;
+}
 .home-media--wrapper {
   position: absolute;
   top: 50%;
@@ -126,6 +135,7 @@
   transform: translate(-50%, -50%);
   width: 177.7777777778vh;
   height: 100vh;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

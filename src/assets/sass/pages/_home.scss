@@ -1,8 +1,22 @@
 @use "../abstracts/mixins" as *;
+@use "../base/base" as *;
 
 .home {
   &-media {
     height: 100vh;
+
+    // to hide info
+    &--panel {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100vw;
+      height: $navbar-height;
+
+      background: $white;
+      z-index: 1;
+    }
 
     &--wrapper {
       @include absoulte-centered;
@@ -22,6 +36,7 @@
 
       width: calc(100vh * 16 / 9);
       height: 100vh;
+      z-index: 1;
     }
   }
 }
