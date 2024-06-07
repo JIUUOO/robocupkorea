@@ -71,7 +71,7 @@
   .navbar-dropdown--toggle:hover {
     background: rgba(0, 0, 0, 0.1);
     color: #151515;
-    transition: background-color 0.5s;
+    transition: all 0.5s;
   }
 }
 @media (max-width: theme("screens.sm")) {
@@ -82,8 +82,9 @@
   }
 }
 .navbar-dropdown--menu {
-  display: none;
-  color: #151515;
+  position: absolute;
+  top: -200%;
+  opacity: 0;
 }
 @media (min-width: theme("screens.sm")) {
   .navbar-dropdown--menu-active {
@@ -94,7 +95,9 @@
     padding: 0.5rem;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    opacity: 1;
     border-radius: 8px;
+    transition: opacity 0.5s ease;
   }
 }
 @media (max-width: theme("screens.sm")) {
@@ -104,12 +107,18 @@
 }
 .navbar-dropdown--list {
   display: block;
+  color: rgba(21, 21, 21, 0.6666666667);
+  padding: 0.2rem;
 }
 @media (max-width: theme("screens.sm")) {
   .navbar-dropdown--list {
     font-size: 1.15rem;
     padding-left: 1rem;
   }
+}
+.navbar-dropdown--list:hover {
+  color: #151515;
+  transition: all 0.5s;
 }
 
 .home-media {

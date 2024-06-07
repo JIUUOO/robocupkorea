@@ -74,7 +74,7 @@
         &:hover {
           background: rgba(0, 0, 0, 0.1);
           color: $primary-color-active;
-          transition: background-color 0.5s;
+          transition: all 0.5s;
         }
       }
 
@@ -86,8 +86,9 @@
     }
 
     &--menu {
-      display: none;
-      color: $primary-color-active;
+      position: absolute;
+      top: -200%;
+      opacity: 0;
 
       &-active {
         @include on-monitor {
@@ -98,7 +99,9 @@
           padding: 0.5rem;
           background-color: white;
           border: 1px solid rgba(0, 0, 0, 0.2);
+          opacity: 1;
           border-radius: 8px;
+          transition: opacity 0.5s ease;
         }
       }
 
@@ -109,10 +112,17 @@
 
     &--list {
       display: block;
+      color: $primary-color;
+      padding: 0.2rem;
 
       @include on-mobile {
         font-size: 1.15rem;
         padding-left: 1rem;
+      }
+
+      &:hover {
+        color: $primary-color-active;
+        transition: all 0.5s;
       }
     }
   }
