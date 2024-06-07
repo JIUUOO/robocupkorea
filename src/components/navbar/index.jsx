@@ -1,5 +1,5 @@
-import { NavLink, useLocation } from "react-router-dom";
-import { useContext, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
+import { useContext, useEffect, useRef, useState } from "react";
 import { GlobalContext } from "../../context";
 
 import rckaLogo from "../../assets/images/logo/robocup-korea-association.png";
@@ -9,32 +9,151 @@ export default function Navbar() {
   const navbarRef = useRef(null);
 
   // hide navbar after 3 sec
-  useEffect(() => {
-    if (pathname === "/") {
-      navbarRef.current.style.top = "0px";
-      const initTimer = setTimeout(() => {
-        navbarRef.current.style.top = "-64px"; // navbar hidden
-      }, 3700);
+  //   useEffect(() => {
+  //     if (pathname === "/") {
+  //       navbarRef.current.style.top = "0px";
+  //       const initTimer = setTimeout(() => {
+  //         navbarRef.current.style.top = "-64px"; // navbar hidden
+  //       }, 3700);
 
-      return () => clearTimeout(initTimer);
-    }
-  }, [scrollY]);
+  //       return () => clearTimeout(initTimer);
+  //     }
+  //   }, [scrollY]);
+
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const openMenu = (dropdown) => {
+    setOpenDropdown(dropdown);
+  };
+
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
   //   console.log(location.pathname);
   return (
-    <nav
-      className="bg-white navbar linear-draw w-screen z-10 linear-draw"
-      ref={navbarRef}
-      //   style={{ top: (scrollY > 0 ? 0 : -64) + "px" }}
-    >
-      <div className="mx-auto max-w-7xl">
-        <div className="relative flex h-16 justify-between items-center">
+    <nav className="navbar" ref={navbarRef}>
+      <div className="container mx-auto">
+        <div className="flex h-16 justify-between items-center">
           <NavLink
             to={"/"}
-            className="relative inline-flex items-center justify-center p-2"
+            className="inline-flex items-center justify-center pl-5"
           >
             <img src={rckaLogo} className="h-14" alt="RCKA"></img>
           </NavLink>
+          <div
+            className="h-12 flex items-center mobile-button"
+            onClick={handleClick}
+          >
+            mobile
+          </div>
+          <ul className={click ? "nav-menu-active" : "nav-menu"}>
+            {/* menu start */}
+            <div className="h-12 flex items-center">
+              <div
+                onMouseEnter={() => openMenu("association")}
+                onMouseLeave={() => openMenu(null)}
+              >
+                <div className="navbar-dropdown--toggle">한국로보컵협회</div>
+                {openDropdown === "association" && (
+                  <div className="navbar-dropdown--menu">
+                    <NavLink
+                      to={"/association/about"}
+                      className="navbar-dropdown--list"
+                    >
+                      소개
+                    </NavLink>
+                    <NavLink
+                      to={"/association/committee"}
+                      className="navbar-dropdown--list"
+                    >
+                      운영위원
+                    </NavLink>
+                  </div>
+                )}
+              </div>
+              <div
+                onMouseEnter={() => openMenu("leagues")}
+                onMouseLeave={() => openMenu(null)}
+              >
+                <div className="navbar-dropdown--toggle">로보컵 리그</div>
+                {openDropdown === "leagues" && (
+                  <div className="navbar-dropdown--menu">
+                    <NavLink
+                      to="/association/about"
+                      className="navbar-dropdown--list"
+                    >
+                      RoboCupSoccer
+                    </NavLink>
+                    <NavLink
+                      to="/association/committee"
+                      className="navbar-dropdown--list"
+                    >
+                      RoboCupRescue
+                    </NavLink>
+                    <NavLink
+                      to="/association/archive"
+                      className="navbar-dropdown--list"
+                    >
+                      RoboCup@Home
+                    </NavLink>
+                    <NavLink
+                      to="/association/archive"
+                      className="navbar-dropdown--list"
+                    >
+                      RoboCupIndustrial
+                    </NavLink>
+                    <NavLink
+                      to="/association/archive"
+                      className="navbar-dropdown--list"
+                    >
+                      RoboCupJunior
+                    </NavLink>
+                  </div>
+                )}
+              </div>
+              <div
+                onMouseEnter={() => openMenu("event")}
+                onMouseLeave={() => openMenu(null)}
+              >
+                <div className="navbar-dropdown--toggle">대회</div>
+                {openDropdown === "event" && (
+                  <div className="navbar-dropdown--menu">
+                    <NavLink to="/leagues" className="navbar-dropdown--list">
+                      소식
+                    </NavLink>
+                    <NavLink to="/leagues" className="navbar-dropdown--list">
+                      기록
+                    </NavLink>
+                  </div>
+                )}
+              </div>
+              <div
+                onMouseEnter={() => openMenu("notice")}
+                onMouseLeave={() => openMenu(null)}
+              >
+                <div className="navbar-dropdown--toggle">공지사항</div>
+                {openDropdown === "notice" && (
+                  <div className="navbar-dropdown--menu">
+                    <div className="navbar-dropdown--list">대회 일정</div>
+                    <div className="navbar-dropdown--list">경기 규정</div>
+                  </div>
+                )}
+              </div>
+              {/* <div className="inline-block">
+              <NavLink
+                to={"/association"}
+                className="relative inline-flex items-center justify-center p-2"
+              >
+                <span>한국어</span>
+              </NavLink>
+              <NavLink
+                to={"/association"}
+                className="relative inline-flex items-center justify-center p-2"
+              >
+                <span>ENG</span>
+              </NavLink>
+            </div> */}
+            </div>
+          </ul>
         </div>
       </div>
     </nav>

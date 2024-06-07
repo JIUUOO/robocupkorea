@@ -1,24 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body::-webkit-scrollbar {
-  display: none;
-}
-
 .max-w-8xl {
   max-width: 92rem;
 }
 
 .navbar {
   position: fixed;
+  transition: top 0.5s;
+  background: white;
+  width: 100vw;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-.navbar-hidden {
-  top: -64px;
+.navbar .mobile-button {
+  padding: 0 0.5rem;
 }
-
-.linear-draw {
-  transition: top 0.35s;
+@media (min-width: theme("screens.sm")) {
+  .navbar .mobile-button {
+    display: none;
+  }
+}
+@media (max-width: theme("screens.sm")) {
+  .navbar .nav-menu {
+    display: none;
+  }
+}
+.navbar .nav-menu-active {
+  position: absolute;
+  left: 0%;
+  bottom: -100%;
+  background: rgba(21, 21, 21, 0.7529411765);
+  width: 100vw;
+  z-index: 10;
+}
+.navbar-dropdown--toggle {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  padding: 0 0.5rem;
+  font-weight: 500;
+  cursor: default;
+  border-radius: 8px;
+  color: rgba(21, 21, 21, 0.7529411765);
+}
+.navbar-dropdown--toggle:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #151515;
+  transition: background-color 0.5s;
+}
+.navbar-dropdown--menu {
+  position: absolute;
+  top: 88%;
+  left: inherit;
+  width: auto;
+  padding: 0.5rem;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.navbar-dropdown--list {
+  display: block;
 }
 
 .home-media {

@@ -5,7 +5,7 @@ import commissionLogo from "../../assets/images/organization/anti-corruption-and
 export default function Footer() {
   return (
     <div className="footer">
-      <div className="max-w-7xl mx-auto mt-20 mb-4">
+      <div className="container mx-auto mt-20 mb-4">
         <div className="grid sm:grid-cols-3 mx-auto w-60 sm:w-auto">
           <img src={ministryLogo} className="h-11 sm:mx-auto"></img>
           <img src={serviceLogo} className="h-11 sm:mx-auto"></img>
@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="bg-zinc-900">
-        <div className="max-w-7xl mx-auto p-5 pb-8">
+        <div className="container mx-auto p-5 pb-8">
           <p className="text-end text-xs text-white">
             <span className="block">
               <strong>한국로보컵협회</strong> | Tel : 070-4247-7485

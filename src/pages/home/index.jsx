@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="home">
       <div className="bg-black">
-        <div className="home-media max-w-8xl mx-auto flex justify-center align-center">
+        <div className="home-media">
           <div className="home-media--wrapper">
             <iframe
               className="home-media--content"
@@ -15,7 +15,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         <div className="flex flex-col justify-center text-base">
           <div>
             <p>
