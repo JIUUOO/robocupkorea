@@ -22,18 +22,26 @@
     display: none;
   }
 }
+.navbar-menu-panel {
+  display: flex;
+  flex-direction: row;
+}
 @media (max-width: theme("screens.sm")) {
-  .navbar .nav-menu {
+  .navbar-menu-panel {
     display: none;
   }
 }
-.navbar .nav-menu-active {
-  position: absolute;
-  left: 0%;
-  bottom: -100%;
-  background: rgba(21, 21, 21, 0.7529411765);
-  width: 100vw;
-  z-index: 10;
+@media (max-width: theme("screens.sm")) {
+  .navbar-menu-panel--active {
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    background: #eaeaea;
+    height: calc(100vh - 64px);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .navbar-dropdown--toggle {
   position: relative;
@@ -45,7 +53,7 @@
   font-weight: 500;
   cursor: default;
   border-radius: 8px;
-  color: rgba(21, 21, 21, 0.7529411765);
+  color: rgba(21, 21, 21, 0.6666666667);
 }
 .navbar-dropdown--toggle:hover {
   background: rgba(0, 0, 0, 0.1);
@@ -54,7 +62,13 @@
 }
 @media (max-width: theme("screens.sm")) {
   .navbar-dropdown--toggle {
-    color: white;
+    width: 100%;
+    justify-content: start;
+  }
+  .navbar-dropdown--toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #151515;
+    transition: background-color 0.5s;
   }
 }
 .navbar-dropdown--menu {

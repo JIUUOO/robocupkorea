@@ -20,19 +20,26 @@
     }
   }
 
-  .nav-menu {
+  &-menu-panel {
+    display: flex;
+    flex-direction: row;
+
     @include on-mobile {
       display: none;
     }
 
-    &-active {
-      position: absolute;
-      left: 0%;
-      bottom: -100%;
-      background: $base-color;
-      //   height: 80vh;
-      width: 100vw;
-      z-index: 10;
+    &--active {
+      @include on-mobile {
+        position: absolute;
+        left: 0%;
+        top: 100%;
+        background: $secondary-color-active;
+        height: calc(100vh - $navbar-height);
+        width: 100vw;
+
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 
@@ -49,16 +56,23 @@
       //   border-radius: 30px;
       cursor: default;
       border-radius: 8px;
-      color: $base-color;
+      color: $primary-color;
 
       &:hover {
         background: rgba(0, 0, 0, 0.1);
-        color: $base-color-active;
+        color: $primary-color-active;
         transition: background-color 0.5s;
       }
 
       @include on-mobile {
-        color: white;
+        width: 100%;
+        justify-content: start;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.1);
+          color: $primary-color-active;
+          transition: background-color 0.5s;
+        }
       }
     }
 
