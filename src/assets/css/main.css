@@ -36,7 +36,6 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    transition: all 0.5s ease;
   }
 }
 .navbar-menu-panel--active {
