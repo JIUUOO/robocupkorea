@@ -28,7 +28,15 @@
 }
 @media (max-width: theme("screens.sm")) {
   .navbar-menu-panel {
-    display: none;
+    position: absolute;
+    left: -100%;
+    top: 100%;
+    background: #ffffff;
+    height: calc(100vh - 64px);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
   }
 }
 .navbar-menu-panel--active {
@@ -45,6 +53,7 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
+    transition: all 0.5s ease;
   }
 }
 .navbar-dropdown--toggle {
