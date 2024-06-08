@@ -163,4 +163,15 @@
   padding-top: 64px;
 }
 
+.committee {
+  padding-top: 64px;
+}
+.committee__table-wrapper {
+  width: 100%;
+  overflow-x: scroll;
+}
+.committee__table-content {
+  gap: 10rem;
+}
+
 /*# sourceMappingURL=main.css.map */

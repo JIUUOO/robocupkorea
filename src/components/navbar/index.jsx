@@ -41,13 +41,13 @@ export default function Navbar() {
   return (
     <nav className="navbar" ref={navbarRef}>
       <div className="container mx-auto">
-        <div className="flex h-16 justify-between items-center px-3">
+        <div className="flex h-14 justify-between items-center px-3">
           <NavLink
             to={"/"}
             className="inline-flex items-center justify-center"
             onClick={closePanel}
           >
-            <img src={rckaLogo} className="max-h-14" alt="RCKA"></img>
+            <img src={rckaLogo} className="max-h-14 py-0.5" alt="RCKA"></img>
           </NavLink>
           <div
             className="h-12 flex justify-center items-center mobile-button text-2xl"

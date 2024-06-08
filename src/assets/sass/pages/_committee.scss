@@ -1,0 +1,14 @@
+@use "../base/base" as *;
+
+.committee {
+  padding-top: $navbar-height;
+
+  &__table-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  &__table-content {
+    gap: 10rem;
+  }
+}
