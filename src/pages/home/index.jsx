@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="home">
       <div className="home-media">
-        <div className="home-media--panel"></div>
+        {/* <div className="home-media--panel"></div> */}
         <div className="home-media--wrapper">
           <iframe
             className="home-media--content"

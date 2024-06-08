@@ -51,7 +51,7 @@
         display: flex;
         flex-direction: column;
 
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
       }
     }
   }
@@ -70,6 +70,12 @@
       border-radius: 8px;
       color: $primary-color;
 
+      @include on-mobile {
+        width: 100%;
+        justify-content: start;
+        font-size: 1.15rem;
+      }
+
       @include on-monitor {
         &:hover {
           background: rgba(0, 0, 0, 0.1);
@@ -77,18 +83,18 @@
           transition: all 0.5s;
         }
       }
-
-      @include on-mobile {
-        width: 100%;
-        justify-content: start;
-        font-size: 1.15rem;
-      }
     }
 
     &--menu {
-      position: absolute;
-      top: -200%;
-      opacity: 0;
+      @include on-mobile {
+        display: block;
+      }
+
+      @include on-monitor {
+        position: absolute;
+        top: -200%;
+        opacity: 0;
+      }
 
       &-active {
         @include on-monitor {
@@ -103,10 +109,6 @@
           border-radius: 8px;
           transition: opacity 0.5s ease;
         }
-      }
-
-      @include on-mobile {
-        display: block;
       }
     }
 

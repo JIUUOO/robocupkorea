@@ -36,6 +36,10 @@
 
       width: calc(100vh * 16 / 9);
       height: 100vh;
+
+      min-width: 100vw;
+      min-height: calc(100vw * 9 / 16);
+
       z-index: 1;
     }
   }
