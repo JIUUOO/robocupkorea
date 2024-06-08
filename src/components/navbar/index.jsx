@@ -32,6 +32,11 @@ export default function Navbar() {
   const handleClick = () => setClick(!click);
   const closePanel = () => setClick(false);
 
+  const closeAll = () => {
+    closeMenu();
+    closePanel();
+  };
+
   //   console.log(location.pathname);
   return (
     <nav className="navbar" ref={navbarRef}>
@@ -71,14 +76,14 @@ export default function Navbar() {
                 <NavLink
                   to={"/association/about"}
                   className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
+                  onClick={closeAll}
                 >
                   소개
                 </NavLink>
                 <NavLink
                   to={"/association/committee"}
                   className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
+                  onClick={closeAll}
                 >
                   운영위원
                 </NavLink>
@@ -99,35 +104,35 @@ export default function Navbar() {
                 <NavLink
                   to="/association/about"
                   className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
+                  onClick={closeAll}
                 >
                   RoboCupSoccer
                 </NavLink>
                 <NavLink
                   to="/association/committee"
                   className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
+                  onClick={closeAll}
                 >
                   RoboCupRescue
                 </NavLink>
                 <NavLink
                   to="/association/archive"
                   className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
+                  onClick={closeAll}
                 >
                   RoboCup@Home
                 </NavLink>
                 <NavLink
                   to="/association/archive"
                   className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
+                  onClick={closeAll}
                 >
                   RoboCupIndustrial
                 </NavLink>
                 <NavLink
                   to="/association/archive"
                   className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
+                  onClick={closeAll}
                 >
                   RoboCupJunior
                 </NavLink>
@@ -148,14 +153,14 @@ export default function Navbar() {
                 <NavLink
                   to="/leagues"
                   className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
+                  onClick={closeAll}
                 >
                   창의코딩대회
                 </NavLink>
                 <NavLink
                   to="/leagues"
                   className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
+                  onClick={closeAll}
                 >
                   기록
                 </NavLink>
@@ -173,16 +178,10 @@ export default function Navbar() {
                     : "navbar-dropdown--menu"
                 }
               >
-                <div
-                  className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
-                >
+                <div className="navbar-dropdown--list" onClick={closeAll}>
                   대회 일정
                 </div>
-                <div
-                  className="navbar-dropdown--list"
-                  onClick={(closePanel, closeMenu)}
-                >
+                <div className="navbar-dropdown--list" onClick={closeAll}>
                   경기 규정
                 </div>
               </div>
