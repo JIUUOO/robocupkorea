@@ -13,12 +13,12 @@
   z-index: 2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.navbar .mobile-button {
+.navbar .button-mobile {
   padding: 0 0.5rem;
   cursor: default;
 }
 @media (min-width: theme("screens.sm")) {
-  .navbar .mobile-button {
+  .navbar .button-mobile {
     display: none;
   }
 }
@@ -101,6 +101,7 @@
     height: auto;
     padding-top: 0.5rem;
     padding-bottom: 0.2rem;
+    font-size: 1.15rem;
   }
 }
 @media (min-width: theme("screens.sm")) {
@@ -117,6 +118,7 @@
 }
 @media (max-width: theme("screens.sm")) {
   .navbar .dropdown--list {
+    font-size: 1.1rem;
     padding-left: 2rem;
   }
 }

@@ -50,7 +50,7 @@ export default function Navbar() {
             <img src={rckaLogo} className="max-h-14 py-1" alt="RCKA"></img>
           </NavLink>
           <div
-            className="h-12 flex justify-center items-center mobile-button text-2xl"
+            className="h-12 flex justify-center items-center button-mobile text-2xl"
             onClick={handleClick}
           >
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
