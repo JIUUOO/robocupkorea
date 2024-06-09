@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/robocupkorea/static/css/main.68bba429.css",
-    "main.js": "/robocupkorea/static/js/main.015374ee.js",
+    "main.css": "/robocupkorea/static/css/main.ee33893d.css",
+    "main.js": "/robocupkorea/static/js/main.7417cacd.js",
     "static/media/misintry-of-trade-industry-and-energy.jpg": "/robocupkorea/static/media/misintry-of-trade-industry-and-energy.47e7622bfeff2d4fa9bc.jpg",
     "static/media/anti-corruption-and-civil-rights-commission.jpg": "/robocupkorea/static/media/anti-corruption-and-civil-rights-commission.0465ddd26e40694764fd.jpg",
     "static/media/national-tax-service.jpg": "/robocupkorea/static/media/national-tax-service.d51fc25d0220a51b3c35.jpg",
     "static/media/robocup-korea-association.png": "/robocupkorea/static/media/robocup-korea-association.040bea43245905792f65.png",
     "static/media/robot-news.png": "/robocupkorea/static/media/robot-news.41287c06f39f381e1b82.png",
     "index.html": "/robocupkorea/index.html",
-    "main.68bba429.css.map": "/robocupkorea/static/css/main.68bba429.css.map",
-    "main.015374ee.js.map": "/robocupkorea/static/js/main.015374ee.js.map"
+    "main.ee33893d.css.map": "/robocupkorea/static/css/main.ee33893d.css.map",
+    "main.7417cacd.js.map": "/robocupkorea/static/js/main.7417cacd.js.map"
   },
   "entrypoints": [
-    "static/css/main.68bba429.css",
-    "static/js/main.015374ee.js"
+    "static/css/main.ee33893d.css",
+    "static/js/main.7417cacd.js"
   ]
 }
