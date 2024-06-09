@@ -1,5 +1,6 @@
 {
   "name": "robocupkorea",
+  "homepage": "https://jiuuoo.github.io/robocupkorea",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "compile:sass": "sass --watch src/assets/sass:src/assets/css",
     "start": "react-scripts start",
     "build": "react-scripts build",

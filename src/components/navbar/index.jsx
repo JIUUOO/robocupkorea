@@ -55,34 +55,30 @@ export default function Navbar() {
           >
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          <ul
-            className={
-              click ? "navbar-menu-panel--active" : "navbar-menu-panel"
-            }
-          >
+          <ul className={click ? "menu-panel--open" : "menu-panel--close"}>
             {/* menu start */}
             <div
               onMouseEnter={() => openMenu("association")}
               onMouseLeave={() => openMenu(null)}
             >
-              <div className="navbar-dropdown--title">한국로보컵협회</div>
+              <div className="dropdown--title">한국로보컵협회</div>
               <div
                 className={
                   openDropdown === "association"
-                    ? "navbar-dropdown--menu-open"
-                    : "navbar-dropdown--menu-close"
+                    ? "dropdown--menu-open"
+                    : "dropdown--menu-close"
                 }
               >
                 <NavLink
                   to={"/association/about"}
-                  className="navbar-dropdown--list"
+                  className="dropdown--list"
                   onClick={closeAll}
                 >
                   소개
                 </NavLink>
                 <NavLink
                   to={"/association/committee"}
-                  className="navbar-dropdown--list"
+                  className="dropdown--list"
                   onClick={closeAll}
                 >
                   운영위원
@@ -93,45 +89,45 @@ export default function Navbar() {
               onMouseEnter={() => openMenu("leagues")}
               onMouseLeave={() => openMenu(null)}
             >
-              <div className="navbar-dropdown--title">로보컵 리그</div>
+              <div className="dropdown--title">로보컵 리그</div>
               <div
                 className={
                   openDropdown === "leagues"
-                    ? "navbar-dropdown--menu-open"
-                    : "navbar-dropdown--menu-close"
+                    ? "dropdown--menu-open"
+                    : "dropdown--menu-close"
                 }
               >
                 <NavLink
                   to="/leagues/robocup-soccer"
-                  className="navbar-dropdown--list"
+                  className="dropdown--list"
                   onClick={closeAll}
                 >
                   RoboCupSoccer
                 </NavLink>
                 <NavLink
                   to="/leagues/robocup-rescue"
-                  className="navbar-dropdown--list"
+                  className="dropdown--list"
                   onClick={closeAll}
                 >
                   RoboCupRescue
                 </NavLink>
                 <NavLink
                   to="/leagues/robocup-athome"
-                  className="navbar-dropdown--list"
+                  className="dropdown--list"
                   onClick={closeAll}
                 >
                   RoboCup@Home
                 </NavLink>
                 <NavLink
                   to="/leagues/robocup-industrial"
-                  className="navbar-dropdown--list"
+                  className="dropdown--list"
                   onClick={closeAll}
                 >
                   RoboCupIndustrial
                 </NavLink>
                 <NavLink
                   to="/leagues/robocup-junior"
-                  className="navbar-dropdown--list"
+                  className="dropdown--list"
                   onClick={closeAll}
                 >
                   RoboCupJunior
@@ -142,24 +138,24 @@ export default function Navbar() {
               onMouseEnter={() => openMenu("event")}
               onMouseLeave={() => openMenu(null)}
             >
-              <div className="navbar-dropdown--title">대회</div>
+              <div className="dropdown--title">대회</div>
               <div
                 className={
                   openDropdown === "event"
-                    ? "navbar-dropdown--menu-open"
-                    : "navbar-dropdown--menu-close"
+                    ? "dropdown--menu-open"
+                    : "dropdown--menu-close"
                 }
               >
                 <NavLink
                   to="/leagues"
-                  className="navbar-dropdown--list"
+                  className="dropdown--list"
                   onClick={closeAll}
                 >
                   창의코딩대회
                 </NavLink>
                 <NavLink
                   to="/leagues"
-                  className="navbar-dropdown--list"
+                  className="dropdown--list"
                   onClick={closeAll}
                 >
                   기록
@@ -170,18 +166,18 @@ export default function Navbar() {
               onMouseEnter={() => openMenu("notice")}
               onMouseLeave={() => openMenu(null)}
             >
-              <div className="navbar-dropdown--title">공지사항</div>
+              <div className="dropdown--title">공지사항</div>
               <div
                 className={
                   openDropdown === "notice"
-                    ? "navbar-dropdown--menu-open"
-                    : "navbar-dropdown--menu-close"
+                    ? "dropdown--menu-open"
+                    : "dropdown--menu-close"
                 }
               >
-                <div className="navbar-dropdown--list" onClick={closeAll}>
+                <div className="dropdown--list" onClick={closeAll}>
                   대회 일정
                 </div>
-                <div className="navbar-dropdown--list" onClick={closeAll}>
+                <div className="dropdown--list" onClick={closeAll}>
                   경기 규정
                 </div>
               </div>

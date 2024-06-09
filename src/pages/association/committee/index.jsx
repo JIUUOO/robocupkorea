@@ -21,19 +21,19 @@ export default function Committee() {
           <table className="committee__table-content">
             <thead>
               <tr className="border-b">
-                <th scope="col" className="text-start">
+                <th scope="col" className="text-start px-2">
                   #
                 </th>
-                <th scope="col" className="text-start">
+                <th scope="col" className="text-start px-2">
                   Name
                 </th>
-                <th scope="col" className="text-start">
+                <th scope="col" className="text-start px-2">
                   Affiliation
                 </th>
-                <th scope="col" className="text-start">
+                <th scope="col" className="text-start px-2">
                   E-Mail
                 </th>
-                <th scope="col" className="text-start">
+                <th scope="col" className="text-start px-2">
                   Position
                 </th>
               </tr>
