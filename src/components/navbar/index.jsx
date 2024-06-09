@@ -65,12 +65,12 @@ export default function Navbar() {
               onMouseEnter={() => openMenu("association")}
               onMouseLeave={() => openMenu(null)}
             >
-              <div className="navbar-dropdown--toggle">한국로보컵협회</div>
+              <div className="navbar-dropdown--title">한국로보컵협회</div>
               <div
                 className={
                   openDropdown === "association"
-                    ? "navbar-dropdown--menu-active"
-                    : "navbar-dropdown--menu"
+                    ? "navbar-dropdown--menu-open"
+                    : "navbar-dropdown--menu-close"
                 }
               >
                 <NavLink
@@ -93,12 +93,12 @@ export default function Navbar() {
               onMouseEnter={() => openMenu("leagues")}
               onMouseLeave={() => openMenu(null)}
             >
-              <div className="navbar-dropdown--toggle">로보컵 리그</div>
+              <div className="navbar-dropdown--title">로보컵 리그</div>
               <div
                 className={
                   openDropdown === "leagues"
-                    ? "navbar-dropdown--menu-active"
-                    : "navbar-dropdown--menu"
+                    ? "navbar-dropdown--menu-open"
+                    : "navbar-dropdown--menu-close"
                 }
               >
                 <NavLink
@@ -142,12 +142,12 @@ export default function Navbar() {
               onMouseEnter={() => openMenu("event")}
               onMouseLeave={() => openMenu(null)}
             >
-              <div className="navbar-dropdown--toggle">대회</div>
+              <div className="navbar-dropdown--title">대회</div>
               <div
                 className={
                   openDropdown === "event"
-                    ? "navbar-dropdown--menu-active"
-                    : "navbar-dropdown--menu"
+                    ? "navbar-dropdown--menu-open"
+                    : "navbar-dropdown--menu-close"
                 }
               >
                 <NavLink
@@ -170,12 +170,12 @@ export default function Navbar() {
               onMouseEnter={() => openMenu("notice")}
               onMouseLeave={() => openMenu(null)}
             >
-              <div className="navbar-dropdown--toggle">공지사항</div>
+              <div className="navbar-dropdown--title">공지사항</div>
               <div
                 className={
                   openDropdown === "notice"
-                    ? "navbar-dropdown--menu-active"
-                    : "navbar-dropdown--menu"
+                    ? "navbar-dropdown--menu-open"
+                    : "navbar-dropdown--menu-close"
                 }
               >
                 <div className="navbar-dropdown--list" onClick={closeAll}>

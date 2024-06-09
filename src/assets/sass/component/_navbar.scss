@@ -58,7 +58,7 @@
 
   // navbar-dropdown
   &-dropdown {
-    &--toggle {
+    &--title {
       position: relative;
       display: inline-flex;
       justify-content: center;
@@ -86,17 +86,7 @@
     }
 
     &--menu {
-      @include on-mobile {
-        display: block;
-      }
-
-      @include on-monitor {
-        position: absolute;
-        top: -200%;
-        opacity: 0;
-      }
-
-      &-active {
+      &-open {
         @include on-monitor {
           position: absolute;
           top: 88%;
@@ -108,6 +98,18 @@
           opacity: 1;
           border-radius: 8px;
           transition: opacity 0.5s ease;
+        }
+      }
+
+      &-close {
+        @include on-mobile {
+          display: block;
+        }
+
+        @include on-monitor {
+          position: absolute;
+          top: -200%;
+          opacity: 0;
         }
       }
     }
