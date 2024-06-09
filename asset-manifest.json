@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.68bba429.css",
-    "main.js": "/static/js/main.ca1bd95a.js",
-    "static/media/misintry-of-trade-industry-and-energy.jpg": "/static/media/misintry-of-trade-industry-and-energy.47e7622bfeff2d4fa9bc.jpg",
-    "static/media/anti-corruption-and-civil-rights-commission.jpg": "/static/media/anti-corruption-and-civil-rights-commission.0465ddd26e40694764fd.jpg",
-    "static/media/national-tax-service.jpg": "/static/media/national-tax-service.d51fc25d0220a51b3c35.jpg",
-    "static/media/robocup-korea-association.png": "/static/media/robocup-korea-association.040bea43245905792f65.png",
-    "static/media/robot-news.png": "/static/media/robot-news.41287c06f39f381e1b82.png",
-    "index.html": "/index.html",
-    "main.68bba429.css.map": "/static/css/main.68bba429.css.map",
-    "main.ca1bd95a.js.map": "/static/js/main.ca1bd95a.js.map"
+    "main.css": "/robocupkorea/static/css/main.68bba429.css",
+    "main.js": "/robocupkorea/static/js/main.015374ee.js",
+    "static/media/misintry-of-trade-industry-and-energy.jpg": "/robocupkorea/static/media/misintry-of-trade-industry-and-energy.47e7622bfeff2d4fa9bc.jpg",
+    "static/media/anti-corruption-and-civil-rights-commission.jpg": "/robocupkorea/static/media/anti-corruption-and-civil-rights-commission.0465ddd26e40694764fd.jpg",
+    "static/media/national-tax-service.jpg": "/robocupkorea/static/media/national-tax-service.d51fc25d0220a51b3c35.jpg",
+    "static/media/robocup-korea-association.png": "/robocupkorea/static/media/robocup-korea-association.040bea43245905792f65.png",
+    "static/media/robot-news.png": "/robocupkorea/static/media/robot-news.41287c06f39f381e1b82.png",
+    "index.html": "/robocupkorea/index.html",
+    "main.68bba429.css.map": "/robocupkorea/static/css/main.68bba429.css.map",
+    "main.015374ee.js.map": "/robocupkorea/static/js/main.015374ee.js.map"
   },
   "entrypoints": [
     "static/css/main.68bba429.css",
-    "static/js/main.ca1bd95a.js"
+    "static/js/main.015374ee.js"
   ]
 }
