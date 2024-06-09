@@ -7,9 +7,18 @@ export default function Footer() {
     <div className="footer">
       <div className="container mx-auto mt-20 mb-4">
         <div className="grid sm:grid-cols-3 mx-auto w-56 sm:w-auto">
-          <img src={ministryLogo} className="h-10 lg:h-11 sm:mx-auto"></img>
-          <img src={serviceLogo} className="h-10 lg:h-11 sm:mx-auto"></img>
-          <img src={commissionLogo} className="h-10 lg:h-11 sm:mx-auto"></img>
+          <img
+            src={ministryLogo}
+            className="h-10 sm:h-9 md:h-11 sm:mx-auto"
+          ></img>
+          <img
+            src={serviceLogo}
+            className="h-10 sm:h-9 md:h-11 sm:mx-auto"
+          ></img>
+          <img
+            src={commissionLogo}
+            className="h-10 sm:h-9 md:h-11 sm:mx-auto"
+          ></img>
         </div>
       </div>
       <div className="bg-zinc-900">

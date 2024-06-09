@@ -41,13 +41,13 @@ export default function Navbar() {
   return (
     <nav className="navbar" ref={navbarRef}>
       <div className="container mx-auto">
-        <div className="flex h-14 justify-between items-center px-3">
+        <div className="flex h-14 justify-between items-center">
           <NavLink
             to={"/"}
             className="inline-flex items-center justify-center"
             onClick={closePanel}
           >
-            <img src={rckaLogo} className="max-h-14 py-0.5" alt="RCKA"></img>
+            <img src={rckaLogo} className="max-h-14 py-1" alt="RCKA"></img>
           </NavLink>
           <div
             className="h-12 flex justify-center items-center mobile-button text-2xl"
@@ -102,35 +102,35 @@ export default function Navbar() {
                 }
               >
                 <NavLink
-                  to="/association/about"
+                  to="/leagues/robocup-soccer"
                   className="navbar-dropdown--list"
                   onClick={closeAll}
                 >
                   RoboCupSoccer
                 </NavLink>
                 <NavLink
-                  to="/association/committee"
+                  to="/leagues/robocup-rescue"
                   className="navbar-dropdown--list"
                   onClick={closeAll}
                 >
                   RoboCupRescue
                 </NavLink>
                 <NavLink
-                  to="/association/archive"
+                  to="/leagues/robocup-athome"
                   className="navbar-dropdown--list"
                   onClick={closeAll}
                 >
                   RoboCup@Home
                 </NavLink>
                 <NavLink
-                  to="/association/archive"
+                  to="/leagues/robocup-industrial"
                   className="navbar-dropdown--list"
                   onClick={closeAll}
                 >
                   RoboCupIndustrial
                 </NavLink>
                 <NavLink
-                  to="/association/archive"
+                  to="/leagues/robocup-junior"
                   className="navbar-dropdown--list"
                   onClick={closeAll}
                 >
