@@ -1,12 +1,30 @@
 import ministryLogo from "../../assets/images/organization/misintry-of-trade-industry-and-energy.jpg";
 import serviceLogo from "../../assets/images/organization/national-tax-service.jpg";
 import commissionLogo from "../../assets/images/organization/anti-corruption-and-civil-rights-commission.jpg";
+import robocupLogo from "../../assets/images/logo/robocup.png";
+import robocupJuniorLogo from "../../assets/images/logo/robocup-junior.jpg";
 
 export default function Footer() {
   return (
-    <div className="footer">
-      <div className="container mx-auto mt-20 mb-4">
-        <div className="grid sm:grid-cols-3 mx-auto w-56 sm:w-auto">
+    <div className="footer mt-20">
+      <div className="container my-4">
+        <div className="grid sm:grid-cols-2 w-56 pl-3 sm:p-0 my-4 mx-auto sm:mr-auto">
+          <a href="https://www.robocup.org/" target="_blank">
+            <img
+              src={robocupLogo}
+              className="h-12 sm:h-14 md:h-16"
+              alt="robocupLogo"
+            />
+          </a>
+          <a href="https://junior.robocup.org/" target="_blank">
+            <img
+              src={robocupJuniorLogo}
+              className="h-12 sm:h-14 md:h-16"
+              alt="robocupLogo"
+            />
+          </a>
+        </div>
+        <div className="grid sm:grid-cols-3 w-56 my-4 mx-auto sm:w-auto">
           <img
             src={ministryLogo}
             className="h-10 sm:h-9 md:h-11 sm:mx-auto"
