@@ -12,6 +12,10 @@ module.exports = {
         xl: "5rem",
         "2xl": "6rem",
       },
+      screens: {
+        DEFAULT: "auto",
+        "3xl": "1600px",
+      },
       margin: "auto",
     },
   },
