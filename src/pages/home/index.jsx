@@ -14,7 +14,7 @@ export default function Home() {
           ></iframe>
         </div>
       </div>
-      <div className="container mx-auto p-5 height">
+      <div className="container p-5 height">
         <div className="flex flex-col justify-center">
           <div className="py-2">
             <h2 className="text-2xl pb-1">한국로보컵협회는 어떤 단체인가요?</h2>

@@ -127,6 +127,13 @@
   transition: all 0.5s;
 }
 
+.footer .league-logo {
+  max-height: 3.5rem;
+}
+.footer .institute-logo {
+  max-height: 3rem;
+}
+
 .home-media {
   height: 100vh;
 }
