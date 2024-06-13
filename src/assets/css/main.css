@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  position: fixed;
+  position: sticky;
   transition: top 0.5s;
   background: white;
   width: 100vw;
@@ -137,15 +137,6 @@
 .home-media {
   height: 100vh;
 }
-.home-media--panel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 64px;
-  background: #ffffff;
-  z-index: 1;
-}
 .home-media--wrapper {
   position: absolute;
   top: 50%;
@@ -164,7 +155,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 177.7777777778vh;
-  height: 100vh;
+  height: calc(100vh + 6rem);
   min-width: 100vw;
   min-height: 56.25vw;
   z-index: 1;

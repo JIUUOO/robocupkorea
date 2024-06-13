@@ -40,7 +40,7 @@ export default function Navbar() {
   //   console.log(location.pathname);
   return (
     <nav className="navbar" ref={navbarRef}>
-      <div className="container mx-auto">
+      <div className="container">
         <div className="flex h-16 justify-between items-center">
           <NavLink
             to={"/"}
