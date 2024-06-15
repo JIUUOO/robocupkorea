@@ -46,6 +46,7 @@
 .navbar .menu__panel {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 @media (max-width: theme("screens.sm")) {
   .navbar .menu__panel-is-active {
@@ -78,6 +79,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
   padding: 0.8rem 0.4rem;
   margin-right: 0.4rem;
   font-weight: 500;
@@ -87,9 +89,8 @@
 }
 @media (min-width: theme("screens.sm")) {
   .navbar .dropdown__header:hover {
-    background: rgba(0, 0, 0, 0.1);
     color: #151515;
-    transition: all 0.3s;
+    transition: color 0.3s;
   }
 }
 @media (max-width: theme("screens.sm")) {
@@ -124,14 +125,14 @@
 @media (min-width: theme("screens.sm")) {
   .navbar .dropdown-is-active {
     position: absolute;
-    top: 88%;
+    top: 100%;
     left: inherit;
     width: auto;
     padding: 0.1rem 0 0.1rem 0.1rem;
     background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 0.1px solid rgba(0, 0, 0, 0.2);
     opacity: 1;
-    border-radius: 8px;
+    border-radius: 3px;
     transition: opacity 0.3s ease;
   }
 }
@@ -153,9 +154,9 @@
   width: 12rem;
   padding: 0.1rem;
   background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 0.1px solid rgba(0, 0, 0, 0.2);
   opacity: 1;
-  border-radius: 8px;
+  border-radius: 3px;
   transition: opacity 0.3s ease;
 }
 .navbar .dropdown--nested-is-inactive {
