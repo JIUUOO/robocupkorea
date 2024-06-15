@@ -102,20 +102,24 @@
     font-size: 1.15rem;
   }
 }
-.navbar .dropdown__items {
+.navbar .dropdown__items, .navbar .dropdown__items--nested {
   display: block;
   color: rgba(21, 21, 21, 0.6666666667);
-  padding: 0.2rem;
+  padding: 0.35rem 0.7rem;
+  margin: 0;
 }
 @media (max-width: theme("screens.sm")) {
-  .navbar .dropdown__items {
+  .navbar .dropdown__items, .navbar .dropdown__items--nested {
     font-size: 1.1rem;
     padding-left: 2rem;
   }
 }
-.navbar .dropdown__items:hover {
+.navbar .dropdown__items:hover, .navbar .dropdown__items--nested:hover {
   color: #151515;
   transition: color 0.3s;
+}
+.navbar .dropdown__items--nested {
+  cursor: default;
 }
 @media (min-width: theme("screens.sm")) {
   .navbar .dropdown-is-active {
@@ -123,7 +127,7 @@
     top: 88%;
     left: inherit;
     width: auto;
-    padding: 0.5rem;
+    padding: 0.1rem 0 0.1rem 0.1rem;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.2);
     opacity: 1;
@@ -141,6 +145,22 @@
   .navbar .dropdown-is-inactive {
     display: block;
   }
+}
+.navbar .dropdown--nested-is-active {
+  position: absolute;
+  top: 2%;
+  left: 99%;
+  width: 12rem;
+  padding: 0.1rem;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+.navbar .dropdown--nested-is-inactive {
+  position: absolute;
+  visibility: hidden;
 }
 
 .footer .league-logo {

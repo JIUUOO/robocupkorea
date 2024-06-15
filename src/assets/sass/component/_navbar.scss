@@ -105,7 +105,8 @@
   .dropdown__items {
     display: block;
     color: $primary-color;
-    padding: 0.2rem;
+    padding: 0.35rem 0.7rem;
+    margin: 0;
 
     @include on-mobile {
       font-size: 1.1rem;
@@ -116,31 +117,58 @@
       color: $primary-color-active;
       transition: color 0.3s;
     }
+
+    &--nested {
+      @extend .dropdown__items;
+      cursor: default;
+    }
   }
 
-  .dropdown-is-active {
-    @include on-monitor {
+  .dropdown {
+    &-is-active {
+      @include on-monitor {
+        position: absolute;
+        top: 88%;
+        left: inherit;
+        width: auto;
+        padding: 0.1rem 0 0.1rem 0.1rem;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        opacity: 1;
+        border-radius: 8px;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    &-is-inactive {
+      @include on-monitor {
+        position: absolute;
+        visibility: hidden;
+      }
+
+      @include on-mobile {
+        display: block;
+      }
+    }
+  }
+
+  .dropdown--nested {
+    &-is-active {
       position: absolute;
-      top: 88%;
-      left: inherit;
-      width: auto;
-      padding: 0.5rem;
+      top: 2%;
+      left: 99%;
+      width: 12rem;
+      padding: 0.1rem;
       background-color: white;
       border: 1px solid rgba(0, 0, 0, 0.2);
       opacity: 1;
       border-radius: 8px;
       transition: opacity 0.3s ease;
     }
-  }
 
-  .dropdown-is-inactive {
-    @include on-monitor {
+    &-is-inactive {
       position: absolute;
       visibility: hidden;
-    }
-
-    @include on-mobile {
-      display: block;
     }
   }
 }

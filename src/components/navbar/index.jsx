@@ -5,20 +5,15 @@ import { GlobalContext } from "../../context";
 import rckaLogo from "../../assets/images/logo/robocup-korea-association.png";
 
 export default function Navbar() {
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const openMenu = (dropdown) => {
-    setOpenDropdown(dropdown);
-  };
-  const closeMenu = () => {
-    setOpenDropdown(null);
-  };
+  const [toggleDropdown, setToggleDropdown] = useState("leagues");
+  const [toggleNestedDropdown, setToggleNestedDropdown] = useState("soccer");
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closePanel = () => setClick(false);
 
   const closeAll = () => {
-    closeMenu();
+    setToggleDropdown(null);
     closePanel();
   };
 
@@ -46,13 +41,13 @@ export default function Navbar() {
           }
         >
           <div
-            onMouseEnter={() => openMenu("rcka")}
-            onMouseLeave={() => openMenu(null)}
+            onMouseEnter={() => setToggleDropdown("rcka")}
+            onMouseLeave={() => setToggleDropdown(null)}
           >
             <div className="dropdown__header">한국로보컵협회</div>
             <div
               className={
-                openDropdown === "rcka"
+                toggleDropdown === "rcka"
                   ? "dropdown-is-active"
                   : "dropdown-is-inactive"
               }
@@ -74,26 +69,66 @@ export default function Navbar() {
             </div>
           </div>
           <div
-            onMouseEnter={() => openMenu("leagues")}
-            onMouseLeave={() => openMenu(null)}
+            onMouseEnter={() => setToggleDropdown("leagues")}
+            onMouseLeave={() => setToggleDropdown(null)}
           >
             <div className="dropdown__header">로보컵 리그</div>
             <div
               className={
-                openDropdown === "leagues"
+                toggleDropdown === "leagues"
                   ? "dropdown-is-active"
                   : "dropdown-is-inactive"
               }
             >
-              <div className="">
-                <span>RoboCupSoccer</span>
-                <NavLink
-                  to="/leagues/robocup-soccer"
-                  className="dropdown__items"
-                  onClick={closeAll}
+              <div
+                onMouseEnter={() => setToggleNestedDropdown("soccer")}
+                onMouseLeave={() => setToggleNestedDropdown(null)}
+                className="dropdown__items--nested"
+              >
+                RoboCupSoccer
+                <div
+                  className={
+                    toggleNestedDropdown === "soccer"
+                      ? "dropdown--nested-is-active"
+                      : "dropdown--nested-is-inactive"
+                  }
                 >
-                  1
-                </NavLink>
+                  <NavLink
+                    to="/leagues/robocup-soccer"
+                    className="dropdown__items"
+                    onClick={closeAll}
+                  >
+                    Humanoid
+                  </NavLink>
+                  <NavLink
+                    to="/leagues/robocup-soccer"
+                    className="dropdown__items"
+                    onClick={closeAll}
+                  >
+                    Standard Platform
+                  </NavLink>
+                  <NavLink
+                    to="/leagues/robocup-soccer"
+                    className="dropdown__items"
+                    onClick={closeAll}
+                  >
+                    Middle Size
+                  </NavLink>
+                  <NavLink
+                    to="/leagues/robocup-soccer"
+                    className="dropdown__items"
+                    onClick={closeAll}
+                  >
+                    Small Size
+                  </NavLink>
+                  <NavLink
+                    to="/leagues/robocup-soccer"
+                    className="dropdown__items"
+                    onClick={closeAll}
+                  >
+                    Simulation
+                  </NavLink>
+                </div>
               </div>
               <NavLink
                 to="/leagues/robocup-rescue"
@@ -126,13 +161,13 @@ export default function Navbar() {
             </div>
           </div>
           <div
-            onMouseEnter={() => openMenu("events")}
-            onMouseLeave={() => openMenu(null)}
+            onMouseEnter={() => setToggleDropdown("events")}
+            onMouseLeave={() => setToggleDropdown(null)}
           >
             <div className="dropdown__header">로보컵 이벤트</div>
             <div
               className={
-                openDropdown === "events"
+                toggleDropdown === "events"
                   ? "dropdown-is-active"
                   : "dropdown-is-inactive"
               }
@@ -154,13 +189,13 @@ export default function Navbar() {
             </div>
           </div>
           <div
-            onMouseEnter={() => openMenu("notice")}
-            onMouseLeave={() => openMenu(null)}
+            onMouseEnter={() => setToggleDropdown("notice")}
+            onMouseLeave={() => setToggleDropdown(null)}
           >
             <div className="dropdown__header">공지사항</div>
             <div
               className={
-                openDropdown === "notice"
+                toggleDropdown === "notice"
                   ? "dropdown-is-active"
                   : "dropdown-is-inactive"
               }
