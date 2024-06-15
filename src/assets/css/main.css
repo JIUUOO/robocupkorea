@@ -14,11 +14,25 @@
 
 .navbar {
   position: sticky;
-  transition: top 0.5s;
-  background: white;
-  width: 100vw;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 64px;
   z-index: 2;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+.navbar .test_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar__logo {
+  height: 52px;
+}
+.navbar__logo-wrapper {
+  display: flex;
+  align-items: center;
+  padding-right: 60px;
 }
 .navbar .button-mobile {
   padding: 0 0.5rem;
@@ -29,12 +43,12 @@
     display: none;
   }
 }
-.navbar .menu-panel--open {
+.navbar .menu__panel {
   display: flex;
   flex-direction: row;
 }
 @media (max-width: theme("screens.sm")) {
-  .navbar .menu-panel--open {
+  .navbar .menu__panel-is-active {
     position: absolute;
     left: 0%;
     top: 100%;
@@ -44,15 +58,11 @@
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 }
-.navbar .menu-panel--close {
-  display: flex;
-  flex-direction: row;
-}
 @media (max-width: theme("screens.sm")) {
-  .navbar .menu-panel--close {
+  .navbar .menu__panel-is-inactive {
     position: absolute;
     left: -100%;
     top: 100%;
@@ -63,46 +73,27 @@
     flex-direction: column;
   }
 }
-@media (min-width: theme("screens.sm")) {
-  .navbar .dropdown--menu-open {
-    position: absolute;
-    top: 88%;
-    right: 0;
-    width: auto;
-    padding: 0.5rem;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    opacity: 1;
-    border-radius: 8px;
-    transition: opacity 0.5s ease;
-  }
-}
-@media (max-width: theme("screens.sm")) {
-  .navbar .dropdown--menu-close {
-    display: block;
-  }
-}
-@media (min-width: theme("screens.sm")) {
-  .navbar .dropdown--menu-close {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-.navbar .dropdown--title {
+.navbar .dropdown__header {
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
-  padding: 0 0.5rem;
+  padding: 0.8rem 0.4rem;
+  margin-right: 0.4rem;
   font-weight: 500;
   border-radius: 8px;
   color: rgba(21, 21, 21, 0.6666666667);
   cursor: default;
 }
+@media (min-width: theme("screens.sm")) {
+  .navbar .dropdown__header:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #151515;
+    transition: all 0.3s;
+  }
+}
 @media (max-width: theme("screens.sm")) {
-  .navbar .dropdown--title {
+  .navbar .dropdown__header {
     width: 100%;
     justify-content: start;
     height: auto;
@@ -111,33 +102,48 @@
     font-size: 1.15rem;
   }
 }
-@media (min-width: theme("screens.sm")) {
-  .navbar .dropdown--title:hover {
-    background: rgba(0, 0, 0, 0.1);
-    color: #151515;
-    transition: all 0.5s;
-  }
-}
-.navbar .dropdown--list {
+.navbar .dropdown__items {
   display: block;
   color: rgba(21, 21, 21, 0.6666666667);
   padding: 0.2rem;
 }
 @media (max-width: theme("screens.sm")) {
-  .navbar .dropdown--list {
+  .navbar .dropdown__items {
     font-size: 1.1rem;
     padding-left: 2rem;
   }
 }
-.navbar .dropdown--list:hover {
+.navbar .dropdown__items:hover {
   color: #151515;
-  transition: all 0.5s;
+  transition: color 0.3s;
+}
+@media (min-width: theme("screens.sm")) {
+  .navbar .dropdown-is-active {
+    position: absolute;
+    top: 88%;
+    left: inherit;
+    width: auto;
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+  }
+}
+@media (min-width: theme("screens.sm")) {
+  .navbar .dropdown-is-inactive {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+@media (max-width: theme("screens.sm")) {
+  .navbar .dropdown-is-inactive {
+    display: block;
+  }
 }
 
 .footer .league-logo {
-  max-height: 3rem;
-}
-.footer .institute-logo {
   max-height: 3rem;
 }
 
