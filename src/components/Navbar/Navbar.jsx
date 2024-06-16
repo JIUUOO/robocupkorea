@@ -1,15 +1,25 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import DropdownToggler from "./DropdownToggler";
 import DropdownItems from "./DropdownItems";
 import rckaLogo from "../../assets/images/logo/robocup-korea-association.png";
+import { scrollToTop } from "../../hooks/ScrollToTop/ScrollToTop";
 
 export default function Navbar() {
   const [toggleDropdown, setToggleDropdown] = useState(null);
   const [toggleNestedDropdown, setToggleNestedDropdown] = useState(null);
-
   const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  const menuPanelRef = useRef("menuPanelRef");
+
+  const handleMobileButtonClick = () => {
+    setClick(!click);
+    menuPanelRef.current.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  };
+
   const closePanel = () => setClick(false);
 
   const closeAll = () => {
@@ -34,6 +44,7 @@ export default function Navbar() {
                 ? "menu__panel menu__panel-is-active"
                 : "menu__panel menu__panel-is-inactive"
             }
+            ref={menuPanelRef}
           >
             <li
               onMouseEnter={() => setToggleDropdown("rcka")}
@@ -287,10 +298,7 @@ export default function Navbar() {
             </div> */}
           </ul>
         </div>
-        <div
-          className="h-12 flex justify-center items-center button-mobile text-2xl"
-          onClick={handleClick}
-        >
+        <div className="button-is-on-mobile" onClick={handleMobileButtonClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
       </div>

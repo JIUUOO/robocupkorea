@@ -35,12 +35,16 @@
   align-items: center;
   padding-right: 60px;
 }
-.navbar .button-mobile {
+.navbar .button-is-on-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0 0.5rem;
   cursor: default;
+  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
-  .navbar .button-mobile {
+  .navbar .button-is-on-mobile {
     display: none;
   }
 }
@@ -68,9 +72,8 @@
   .navbar .menu__panel-is-inactive {
     position: absolute;
     left: -100%;
-    top: 100%;
     background: #ffffff;
-    height: calc(100vh - 64px);
+    height: calc(100vh - 100%);
     width: 100vw;
     display: flex;
     flex-direction: column;
