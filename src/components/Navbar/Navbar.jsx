@@ -5,7 +5,7 @@ import DropdownItems from "./DropdownItems";
 import rckaLogo from "../../assets/images/logo/robocup-korea-association.png";
 
 export default function Navbar() {
-  const [toggleDropdown, setToggleDropdown] = useState("leagues");
+  const [toggleDropdown, setToggleDropdown] = useState(null);
   const [toggleNestedDropdown, setToggleNestedDropdown] = useState(null);
 
   const [click, setClick] = useState(false);
