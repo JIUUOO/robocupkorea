@@ -6,8 +6,8 @@ export default function Home() {
         <div className="home-media--wrapper">
           <iframe
             className="home-media--content"
-            src="https://www.youtube.com/embed/LXb3EKWsInQ?si=e8kJCPU0BqRB7bIK&autoplay=1&mute=1&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=18"
-            // src="https://www.youtube.com/embed/QB5dvHHnSMk?si=H8vYmersBfckFq5m&autoplay=1&mute=1&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=18&playlist=QB5dvHHnSMk"
+            // src="https://www.youtube.com/embed/LXb3EKWsInQ?si=e8kJCPU0BqRB7bIK&autoplay=1&mute=1&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=18"
+            src="https://www.youtube.com/embed/QB5dvHHnSMk?si=H8vYmersBfckFq5m&autoplay=1&mute=1&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=18&playlist=QB5dvHHnSMk"
             title="RoboCup RCAP Pyeongchang 2023"
             allow="autoplay;"
             referrerPolicy="strict-origin-when-cross-origin"

@@ -25,6 +25,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .navbar__logo {
   height: 52px;
@@ -38,7 +39,7 @@
   padding: 0 0.5rem;
   cursor: default;
 }
-@media (min-width: theme("screens.sm")) {
+@media (min-width: 768px) {
   .navbar .button-mobile {
     display: none;
   }
@@ -48,7 +49,7 @@
   flex-direction: row;
   height: 100%;
 }
-@media (max-width: theme("screens.sm")) {
+@media (max-width: 768px) {
   .navbar .menu__panel-is-active {
     position: absolute;
     left: 0%;
@@ -60,9 +61,10 @@
     display: flex;
     flex-direction: column;
     transition: all 0.5s ease;
+    overflow: hidden;
   }
 }
-@media (max-width: theme("screens.sm")) {
+@media (max-width: 768px) {
   .navbar .menu__panel-is-inactive {
     position: absolute;
     left: -100%;
@@ -87,13 +89,13 @@
   color: rgba(21, 21, 21, 0.6666666667);
   cursor: default;
 }
-@media (min-width: theme("screens.sm")) {
+@media (min-width: 768px) {
   .navbar .dropdown__toggler:hover {
     color: #151515;
     transition: color 0.3s;
   }
 }
-@media (max-width: theme("screens.sm")) {
+@media (max-width: 768px) {
   .navbar .dropdown__toggler {
     width: 100%;
     justify-content: start;
@@ -103,26 +105,29 @@
     font-size: 1.15rem;
   }
 }
-.navbar .dropdown__items, .navbar .dropdown__items--nested {
+.navbar .dropdown__toggler--nested {
+  cursor: default;
+}
+.navbar .dropdown__toggler--nested:hover {
+  color: rgba(21, 21, 21, 0.6666666667);
+}
+.navbar .dropdown__items, .navbar .dropdown__toggler--nested {
   display: block;
   color: rgba(21, 21, 21, 0.6666666667);
   padding: 0.35rem 0.7rem;
   margin: 0;
 }
-@media (max-width: theme("screens.sm")) {
-  .navbar .dropdown__items, .navbar .dropdown__items--nested {
+@media (max-width: 768px) {
+  .navbar .dropdown__items, .navbar .dropdown__toggler--nested {
     font-size: 1.1rem;
-    padding-left: 2rem;
+    padding-left: 20px;
   }
 }
-.navbar .dropdown__items:hover, .navbar .dropdown__items--nested:hover {
+.navbar .dropdown__items:hover, .navbar .dropdown__toggler--nested:hover {
   color: #151515;
   transition: color 0.3s;
 }
-.navbar .dropdown__items--nested {
-  cursor: default;
-}
-@media (min-width: theme("screens.sm")) {
+@media (min-width: 768px) {
   .navbar .dropdown-is-active {
     position: absolute;
     top: 85%;
@@ -131,37 +136,42 @@
     padding: 0.1rem 0 0.1rem 0.1rem;
     background-color: white;
     border: 0.1px solid rgba(0, 0, 0, 0.2);
-    opacity: 1;
     border-radius: 3px;
-    transition: opacity 0.3s ease;
   }
 }
-@media (min-width: theme("screens.sm")) {
-  .navbar .dropdown-is-inactive {
-    position: absolute;
-    visibility: hidden;
+@media (min-width: 768px) {
+  .navbar .dropdown-is-inactive, .navbar .dropdown--nested-is-inactive {
+    display: none;
   }
 }
-@media (max-width: theme("screens.sm")) {
-  .navbar .dropdown-is-inactive {
+@media (max-width: 768px) {
+  .navbar .dropdown-is-inactive, .navbar .dropdown--nested-is-inactive {
     display: block;
   }
 }
-.navbar .dropdown--nested-is-active {
-  position: absolute;
-  top: 2%;
-  left: 95%;
-  width: 12rem;
-  padding: 0.1rem;
-  background-color: white;
-  border: 0.1px solid rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  border-radius: 3px;
-  transition: opacity 0.3s ease;
+@media (min-width: 768px) {
+  .navbar .dropdown--nested-is-active {
+    position: absolute;
+    top: inherit;
+    left: 95%;
+    padding: 0.1rem;
+    margin-top: -37px;
+    width: auto;
+    background-color: white;
+    border: 0.1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    white-space: nowrap;
+  }
 }
-.navbar .dropdown--nested-is-inactive {
-  position: absolute;
-  visibility: hidden;
+@media (max-width: 768px) {
+  .navbar .dropdown--nested-is-active {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar .dropdown--nested-is-inactive {
+    padding-left: 20px;
+  }
 }
 
 .footer .league-logo {

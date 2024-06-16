@@ -15,6 +15,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__logo {
@@ -55,6 +56,8 @@
         flex-direction: column;
 
         transition: all 0.5s ease;
+
+        overflow: hidden;
       }
     }
 
@@ -102,6 +105,15 @@
       padding-bottom: 0.2rem;
       font-size: 1.15rem;
     }
+
+    &--nested {
+      @extend .dropdown__items;
+      cursor: default;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
   }
 
   .dropdown__items {
@@ -112,17 +124,12 @@
 
     @include on-mobile {
       font-size: 1.1rem;
-      padding-left: 2rem;
+      padding-left: 20px;
     }
 
     &:hover {
       color: $primary-color-active;
       transition: color 0.3s;
-    }
-
-    &--nested {
-      @extend .dropdown__items;
-      cursor: default;
     }
   }
 
@@ -136,16 +143,13 @@
         padding: 0.1rem 0 0.1rem 0.1rem;
         background-color: white;
         border: 0.1px solid rgba(0, 0, 0, 0.2);
-        opacity: 1;
         border-radius: 3px;
-        transition: opacity 0.3s ease;
       }
     }
 
     &-is-inactive {
       @include on-monitor {
-        position: absolute;
-        visibility: hidden;
+        display: none;
       }
 
       @include on-mobile {
@@ -156,21 +160,30 @@
 
   .dropdown--nested {
     &-is-active {
-      position: absolute;
-      top: 2%;
-      left: 95%;
-      width: 12rem;
-      padding: 0.1rem;
-      background-color: white;
-      border: 0.1px solid rgba(0, 0, 0, 0.2);
-      opacity: 1;
-      border-radius: 3px;
-      transition: opacity 0.3s ease;
+      @include on-monitor {
+        position: absolute;
+        top: inherit;
+        left: 95%;
+        padding: 0.1rem;
+        margin-top: -37px;
+        width: auto;
+        background-color: white;
+        border: 0.1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        white-space: nowrap;
+      }
+
+      @include on-mobile {
+        padding-left: 20px;
+      }
     }
 
     &-is-inactive {
-      position: absolute;
-      visibility: hidden;
+      @extend .dropdown-is-inactive;
+
+      @include on-mobile {
+        padding-left: 20px;
+      }
     }
   }
 }

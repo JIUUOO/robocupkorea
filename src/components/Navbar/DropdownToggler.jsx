@@ -1,8 +1,8 @@
-export default function DropdownToggler({ children }) {
+export default function DropdownToggler({ nested = false, children }) {
   return (
     <a
       href="/"
-      className="dropdown__toggler"
+      className={nested ? "dropdown__toggler--nested" : "dropdown__toggler"}
       onClick={(evt) => evt.preventDefault()}
     >
       {children}
