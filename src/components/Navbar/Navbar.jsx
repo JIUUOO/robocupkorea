@@ -299,9 +299,9 @@ export default function Navbar() {
             </div> */}
           </ul>
         </div>
-      </div>
-      <div className="button-is-on-mobile" onClick={handleMobileButtonClick}>
-        <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        <div className="button-is-on-mobile" onClick={handleMobileButtonClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
       </div>
     </nav>
   );
