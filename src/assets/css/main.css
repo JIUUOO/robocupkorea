@@ -1,13 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-.max-w-8xl {
-  max-width: 92rem;
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
 }
 
-.test_container {
-  max-width: 1408px;
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
   width: 100%;
+  max-width: 1408px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -21,11 +29,16 @@
   z-index: 2;
   background: #ffffff;
 }
-.navbar .test_container {
+.navbar .container {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.navbar .navbar-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .navbar__logo {
   height: 52px;
@@ -33,7 +46,7 @@
 .navbar__logo-wrapper {
   display: flex;
   align-items: center;
-  padding-right: 60px;
+  margin-right: 60px;
 }
 .navbar .button-is-on-mobile {
   display: flex;
@@ -79,11 +92,20 @@
     flex-direction: column;
   }
 }
+.navbar ul {
+  list-style-type: none;
+  height: 100%;
+  margin: 0;
+}
+.navbar li {
+  height: 100%;
+}
 .navbar .dropdown__items, .navbar .dropdown__toggler--nested {
   display: block;
   color: rgba(21, 21, 21, 0.6666666667);
-  padding: 0.35rem 0.7rem;
+  padding: 5px 6px;
   margin: 0;
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   .navbar .dropdown__items, .navbar .dropdown__toggler--nested {
@@ -105,12 +127,13 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 0.8rem 0.4rem;
+  padding: 0 0.4rem;
   margin-right: 0.4rem;
   font-weight: 500;
   border-radius: 8px;
   color: rgba(21, 21, 21, 0.6666666667);
   cursor: default;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .navbar .dropdown__toggler:hover {
@@ -138,7 +161,7 @@
     top: 85%;
     left: inherit;
     width: auto;
-    padding: 0.1rem 0 0.1rem 0.1rem;
+    padding: 6px;
     background-color: white;
     border: 0.1px solid rgba(0, 0, 0, 0.2);
     border-radius: 3px;
@@ -159,7 +182,7 @@
     position: absolute;
     top: inherit;
     left: 95%;
-    padding: 0.1rem;
+    padding: 6px;
     margin-top: -37px;
     width: auto;
     background-color: white;

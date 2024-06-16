@@ -1,10 +1,16 @@
-.max-w-8xl {
-  max-width: 92rem;
+body {
+  margin: 0;
 }
 
-.test_container {
-  max-width: 1408px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
   width: 100%;
+  max-width: 1408px;
   padding: 0 16px;
   margin: 0 auto;
 }

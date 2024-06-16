@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import DropdownToggler from "./DropdownToggler";
 import DropdownItems from "./DropdownItems";
 import rckaLogo from "../../assets/images/logo/robocup-korea-association.png";
-import { scrollToTop } from "../../hooks/ScrollToTop/ScrollToTop";
 
 export default function Navbar() {
   const [toggleDropdown, setToggleDropdown] = useState(null);
@@ -31,13 +30,15 @@ export default function Navbar() {
   //   console.log(location.pathname);
   return (
     <nav className="navbar">
-      <div className="test_container">
-        <div style={{ display: "flex" }}>
-          <div className="navbar__logo-wrapper">
-            <NavLink to={"/"} onClick={closePanel}>
-              <img src={rckaLogo} className="navbar__logo" alt="rckaLogo"></img>
-            </NavLink>
-          </div>
+      <div className="container">
+        <div className="navbar-wrapper">
+          <NavLink
+            to={"/"}
+            className="navbar__logo-wrapper"
+            onClick={closePanel}
+          >
+            <img src={rckaLogo} className="navbar__logo" alt="rckaLogo"></img>
+          </NavLink>
           <ul
             className={
               click
@@ -298,9 +299,9 @@ export default function Navbar() {
             </div> */}
           </ul>
         </div>
-        <div className="button-is-on-mobile" onClick={handleMobileButtonClick}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
-        </div>
+      </div>
+      <div className="button-is-on-mobile" onClick={handleMobileButtonClick}>
+        <i className={click ? "fas fa-times" : "fas fa-bars"} />
       </div>
     </nav>
   );
