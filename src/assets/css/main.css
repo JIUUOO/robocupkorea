@@ -74,7 +74,7 @@
     flex-direction: column;
   }
 }
-.navbar .dropdown__header {
+.navbar .dropdown__toggler {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -88,13 +88,13 @@
   cursor: default;
 }
 @media (min-width: theme("screens.sm")) {
-  .navbar .dropdown__header:hover {
+  .navbar .dropdown__toggler:hover {
     color: #151515;
     transition: color 0.3s;
   }
 }
 @media (max-width: theme("screens.sm")) {
-  .navbar .dropdown__header {
+  .navbar .dropdown__toggler {
     width: 100%;
     justify-content: start;
     height: auto;
@@ -125,7 +125,7 @@
 @media (min-width: theme("screens.sm")) {
   .navbar .dropdown-is-active {
     position: absolute;
-    top: 100%;
+    top: 85%;
     left: inherit;
     width: auto;
     padding: 0.1rem 0 0.1rem 0.1rem;
@@ -150,7 +150,7 @@
 .navbar .dropdown--nested-is-active {
   position: absolute;
   top: 2%;
-  left: 99%;
+  left: 95%;
   width: 12rem;
   padding: 0.1rem;
   background-color: white;

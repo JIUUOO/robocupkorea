@@ -1,17 +1,17 @@
-import { Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/navbar";
-import ScrollToTop from "./hooks/scroll-to-top";
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar/Navbar";
+import ScrollToTop from "./hooks/ScrollToTop/ScrollToTop";
 import Home from "./pages/home";
 import About from "./pages/association/about";
 import Committee from "./pages/association/committee";
-
 import RoboCupSoccer from "./pages/leagues/robocup-soccer";
 import RoboCupRescue from "./pages/leagues/robocup-rescue";
 import RoboCupAthome from "./pages/leagues/robocup-athome";
 import RoboCupIndustrial from "./pages/leagues/robocup-industrial";
 import RoboCupJunior from "./pages/leagues/robocup-junior";
 
-import Footer from "./components/footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (

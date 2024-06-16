@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { useContext, useEffect, useRef, useState } from "react";
-import { GlobalContext } from "../../context";
-
+import { useState } from "react";
+import DropdownToggler from "./DropdownToggler";
+import DropdownItems from "./DropdownItems";
 import rckaLogo from "../../assets/images/logo/robocup-korea-association.png";
 
 export default function Navbar() {
-  const [toggleDropdown, setToggleDropdown] = useState("leagues");
-  const [toggleNestedDropdown, setToggleNestedDropdown] = useState("soccer");
+  const [toggleDropdown, setToggleDropdown] = useState(null);
+  const [toggleNestedDropdown, setToggleNestedDropdown] = useState(null);
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -40,11 +40,11 @@ export default function Navbar() {
               : "menu__panel menu__panel-is-inactive"
           }
         >
-          <div
+          <li
             onMouseEnter={() => setToggleDropdown("rcka")}
             onMouseLeave={() => setToggleDropdown(null)}
           >
-            <div className="dropdown__header">한국로보컵협회</div>
+            <DropdownToggler>한국로보컵협회</DropdownToggler>
             <div
               className={
                 toggleDropdown === "rcka"
@@ -52,27 +52,19 @@ export default function Navbar() {
                   : "dropdown-is-inactive"
               }
             >
-              <NavLink
-                to={"/association/about"}
-                className="dropdown__items"
-                onClick={closeAll}
-              >
+              <DropdownItems to="/association/about" onClick={closeAll}>
                 소개
-              </NavLink>
-              <NavLink
-                to={"/association/committee"}
-                className="dropdown__items"
-                onClick={closeAll}
-              >
+              </DropdownItems>
+              <DropdownItems to="/association/committee" onClick={closeAll}>
                 운영위원
-              </NavLink>
+              </DropdownItems>
             </div>
-          </div>
-          <div
+          </li>
+          <li
             onMouseEnter={() => setToggleDropdown("leagues")}
             onMouseLeave={() => setToggleDropdown(null)}
           >
-            <div className="dropdown__header">로보컵 리그</div>
+            <DropdownToggler>로보컵 리그</DropdownToggler>
             <div
               className={
                 toggleDropdown === "leagues"
@@ -159,12 +151,12 @@ export default function Navbar() {
                 RoboCupJunior
               </NavLink>
             </div>
-          </div>
-          <div
+          </li>
+          <li
             onMouseEnter={() => setToggleDropdown("events")}
             onMouseLeave={() => setToggleDropdown(null)}
           >
-            <div className="dropdown__header">로보컵 이벤트</div>
+            <DropdownToggler>로보컵 이벤트</DropdownToggler>
             <div
               className={
                 toggleDropdown === "events"
@@ -172,27 +164,19 @@ export default function Navbar() {
                   : "dropdown-is-inactive"
               }
             >
-              <NavLink
-                to="/leagues"
-                className="dropdown__items"
-                onClick={closeAll}
-              >
-                창의코딩대회
-              </NavLink>
-              <NavLink
-                to="/leagues"
-                className="dropdown__items"
-                onClick={closeAll}
-              >
+              <DropdownItems to="/event/news" onClick={closeAll}>
+                2024 제 n회 창의코딩대회
+              </DropdownItems>
+              <DropdownItems to="/event/archive" onClick={closeAll}>
                 기록
-              </NavLink>
+              </DropdownItems>
             </div>
-          </div>
-          <div
+          </li>
+          <li
             onMouseEnter={() => setToggleDropdown("notice")}
             onMouseLeave={() => setToggleDropdown(null)}
           >
-            <div className="dropdown__header">공지사항</div>
+            <DropdownToggler>공지사항</DropdownToggler>
             <div
               className={
                 toggleDropdown === "notice"
@@ -200,14 +184,14 @@ export default function Navbar() {
                   : "dropdown-is-inactive"
               }
             >
-              <div className="dropdown__items" onClick={closeAll}>
+              <DropdownItems to="/event/archive" onClick={closeAll}>
                 대회 일정
-              </div>
-              <div className="dropdown__items" onClick={closeAll}>
+              </DropdownItems>
+              <DropdownItems to="/event/archive" onClick={closeAll}>
                 경기 규정
-              </div>
+              </DropdownItems>
             </div>
-          </div>
+          </li>
           {/* <div className="inline-block">
               <NavLink
                 to={"/assoc"}

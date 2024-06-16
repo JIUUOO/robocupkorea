@@ -73,7 +73,7 @@
     }
   }
 
-  .dropdown__header {
+  .dropdown__toggler {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -130,7 +130,7 @@
     &-is-active {
       @include on-monitor {
         position: absolute;
-        top: 100%;
+        top: 85%;
         left: inherit;
         width: auto;
         padding: 0.1rem 0 0.1rem 0.1rem;
@@ -158,7 +158,7 @@
     &-is-active {
       position: absolute;
       top: 2%;
-      left: 99%;
+      left: 95%;
       width: 12rem;
       padding: 0.1rem;
       background-color: white;
