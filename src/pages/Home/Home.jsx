@@ -13,7 +13,7 @@ export default function Home() {
           ></iframe>
         </div>
       </div>
-      <div className="test_container">
+      <div className="container">
         <h2>한국로보컵협회는 어떤 단체인가요?</h2>
         <p>
           &nbsp;한국로보컵협회(RCKA) 홈페이지를 방문해주신 여러분께 깊이
