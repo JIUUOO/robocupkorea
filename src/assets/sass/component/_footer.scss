@@ -1,5 +1,40 @@
+@use "../base/base" as *;
+
 .footer {
-  .league-logo {
-    max-height: 3rem;
+  margin-top: 5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  .league__logo {
+    height: 70px;
+  }
+
+  .institute__logo {
+    height: 40px;
+  }
+
+  &__bottom {
+    background-color: $black;
+    padding: 1px 0 3px 0;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      color: $white;
+
+      @media (max-width: $sm) {
+        flex-direction: column;
+      }
+
+      .fa.fa-github {
+        color: $white;
+      }
+
+      div:last-child {
+        font-size: 14px;
+        font-weight: 200;
+      }
+    }
   }
 }

@@ -29,6 +29,9 @@ body {
   z-index: 1;
   background: #ffffff;
 }
+.navbar--fixed {
+  position: fixed;
+}
 .navbar .container {
   height: 100%;
   display: flex;
@@ -72,7 +75,7 @@ body {
     left: 0%;
     top: 100%;
     background: #ffffff;
-    height: auto;
+    height: calc(100vh - 100%);
     width: 100vw;
     padding: 0.5rem;
     display: flex;
@@ -88,16 +91,11 @@ body {
     background: #ffffff;
     height: auto;
     width: 100vw;
-    display: flex;
     flex-direction: column;
   }
 }
 .navbar ul {
   list-style-type: none;
-  height: 100%;
-  margin: 0;
-}
-.navbar li {
   height: 100%;
 }
 .navbar .dropdown__items, .navbar .dropdown__toggler--nested {
@@ -202,8 +200,38 @@ body {
   }
 }
 
-.footer .league-logo {
-  max-height: 3rem;
+.footer {
+  margin-top: 5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.footer .league__logo {
+  height: 70px;
+}
+.footer .institute__logo {
+  height: 40px;
+}
+.footer__bottom {
+  background-color: #010101;
+  padding: 1px 0 3px 0;
+}
+.footer__bottom .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+@media (max-width: 340px) {
+  .footer__bottom .container {
+    flex-direction: column;
+  }
+}
+.footer__bottom .container .fa.fa-github {
+  color: #ffffff;
+}
+.footer__bottom .container div:last-child {
+  font-size: 14px;
+  font-weight: 200;
 }
 
 .home-media {

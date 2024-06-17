@@ -29,7 +29,7 @@ export default function Navbar() {
 
   //   console.log(location.pathname);
   return (
-    <nav className="navbar">
+    <nav className={click ? "navbar navbar--fixed" : "navbar"}>
       <div className="container">
         <div className="navbar-wrapper">
           <NavLink

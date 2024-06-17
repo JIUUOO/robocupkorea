@@ -35,7 +35,7 @@ function App() {
         <Route path="/notice/event" element={<Committee />} />
         <Route path="/notice/rules" element={<Committee />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

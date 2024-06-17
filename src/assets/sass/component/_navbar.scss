@@ -10,6 +10,10 @@
   z-index: 1;
   background: $white;
 
+  &--fixed {
+    position: fixed;
+  }
+
   .container {
     height: 100%;
     display: flex;
@@ -57,7 +61,7 @@
         left: 0%;
         top: 100%;
         background: $white;
-        height: auto;
+        height: calc(100vh - 100%);
         width: 100vw;
         padding: 0.5rem;
         display: flex;
@@ -75,7 +79,6 @@
         height: auto;
         width: 100vw;
 
-        display: flex;
         flex-direction: column;
       }
     }
@@ -83,11 +86,6 @@
 
   ul {
     list-style-type: none;
-    height: 100%;
-    margin: 0;
-  }
-
-  li {
     height: 100%;
   }
 
