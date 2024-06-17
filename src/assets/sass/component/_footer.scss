@@ -24,10 +24,15 @@
 
   &-nav {
     display: flex;
+    list-style-type: none;
 
     .menu {
       &__header {
         display: block;
+
+        &--nested {
+          display: block;
+        }
       }
       &__item {
         display: block;

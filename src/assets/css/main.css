@@ -219,8 +219,12 @@ body {
 }
 .footer-nav {
   display: flex;
+  list-style-type: none;
 }
 .footer-nav .menu__header {
+  display: block;
+}
+.footer-nav .menu__header--nested {
   display: block;
 }
 .footer-nav .menu__item {

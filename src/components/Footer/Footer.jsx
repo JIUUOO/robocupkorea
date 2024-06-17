@@ -33,8 +33,8 @@ export default function Footer() {
             />
           </a>
         </div>
-        <div className="footer-nav">
-          <div>
+        <ul className="footer-nav">
+          <li>
             <span className="menu__header">한국로보컵협회</span>
             <NavLink to="/association/about">
               <span className="menu__item">소개</span>
@@ -42,51 +42,51 @@ export default function Footer() {
             <NavLink to="/association/committee">
               <span className="menu__item">운영위원</span>
             </NavLink>
-          </div>
-          <div>
+          </li>
+          <li>
             <span className="menu__header">로보컵 리그</span>
             <div>
-              <span>RoboCupSoccer</span>
-              <span>Humanoid</span>
-              <span>Standard Platform</span>
-              <span>Middle Size</span>
-              <span>Small Size</span>
-              <span>Simulation</span>
+              <span className="menu__header--nested">RoboCupSoccer</span>
+              <span className="menu__item">Humanoid</span>
+              <span className="menu__item">Standard Platform</span>
+              <span className="menu__item">Middle Size</span>
+              <span className="menu__item">Small Size</span>
+              <span className="menu__item">Simulation</span>
             </div>
             <div>
-              <span>RoboCupRescue</span>
-              <span>Robot</span>
-              <span>Simulation</span>
+              <span className="menu__header--nested">RoboCupRescue</span>
+              <span className="menu__item">Robot</span>
+              <span className="menu__item">Simulation</span>
             </div>
             <div>
-              <span>RoboCup@Home</span>
-              <span>Open Platform</span>
-              <span>Domestic Standard Platform</span>
-              <span>Social Standard Platform</span>
+              <span className="menu__header--nested">RoboCup@Home</span>
+              <span className="menu__item">Open Platform</span>
+              <span className="menu__item">Domestic Standard Platform</span>
+              <span className="menu__item">Social Standard Platform</span>
             </div>
             <div>
-              <span>RoboCupIndustrial</span>
-              <span>RoboCup@Work</span>
-              <span>Logistics</span>
+              <span className="menu__header--nested">RoboCupIndustrial</span>
+              <span className="menu__item">RoboCup@Work</span>
+              <span className="menu__item">Logistics</span>
             </div>
             <div>
-              <span>RoboCupJunior</span>
-              <span>Soccer</span>
-              <span>OnStage</span>
-              <span>Rescue</span>
+              <span className="menu__header--nested">RoboCupJunior</span>
+              <span className="menu__item">Soccer</span>
+              <span className="menu__item">OnStage</span>
+              <span className="menu__item">Rescue</span>
             </div>
-          </div>
-          <div>
+          </li>
+          <li>
             <span className="menu__header">로보컵 이벤트</span>
-            <span>2024 제 n회 창의코딩대회</span>
-            <span>기록</span>
-          </div>
-          <div>
+            <span className="menu__item">2024 제 n회 창의코딩대회</span>
+            <span className="menu__item">기록</span>
+          </li>
+          <li>
             <span className="menu__header">공지사항</span>
-            <span>이벤트 일정</span>
-            <span>리그 규정</span>
-          </div>
-        </div>
+            <span className="menu__item">이벤트 일정</span>
+            <span className="menu__item">리그 규정</span>
+          </li>
+        </ul>
 
         <div className="institute__logo--wrapper">
           <img src={ministryLogo} className="institute__logo"></img>
