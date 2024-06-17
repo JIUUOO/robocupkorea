@@ -11,35 +11,84 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="container">
-        <div className="flex">
-          <div className="block">
-            <NavLink to={"/"}>
-              <img src={rckaLogo} className="league__logo" alt="rckaLogo"></img>
+        <div className="league__logo--wrapper">
+          <NavLink to={"/"}>
+            <img src={rckaLogo} className="league__logo" alt="rckaLogo"></img>
+          </NavLink>
+          <a href="https://www.robocup.org/" target="_blank">
+            <img src={robocupLogo} className="league__logo" alt="robocupLogo" />
+          </a>
+          <a href="https://junior.robocup.org/" target="_blank">
+            <img
+              src={robocupJuniorLogo}
+              className="league__logo"
+              alt="robocupLogo"
+            />
+          </a>
+          <a href="https://robocupap.org/" target="_blank">
+            <img
+              src={robocupAsiaPacific}
+              className="league__logo"
+              alt="robocupLogo"
+            />
+          </a>
+        </div>
+        <div className="footer-nav">
+          <div>
+            <span className="menu__header">한국로보컵협회</span>
+            <NavLink to="/association/about">
+              <span className="menu__item">소개</span>
             </NavLink>
-            <a href="https://www.robocup.org/" target="_blank">
-              <img
-                src={robocupLogo}
-                className="league__logo"
-                alt="robocupLogo"
-              />
-            </a>
-            <a href="https://junior.robocup.org/" target="_blank">
-              <img
-                src={robocupJuniorLogo}
-                className="league__logo"
-                alt="robocupLogo"
-              />
-            </a>
-            <a href="https://robocupap.org/" target="_blank">
-              <img
-                src={robocupAsiaPacific}
-                className="league__logo"
-                alt="robocupLogo"
-              />
-            </a>
+            <NavLink to="/association/committee">
+              <span className="menu__item">운영위원</span>
+            </NavLink>
+          </div>
+          <div>
+            <span className="menu__header">로보컵 리그</span>
+            <div>
+              <span>RoboCupSoccer</span>
+              <span>Humanoid</span>
+              <span>Standard Platform</span>
+              <span>Middle Size</span>
+              <span>Small Size</span>
+              <span>Simulation</span>
+            </div>
+            <div>
+              <span>RoboCupRescue</span>
+              <span>Robot</span>
+              <span>Simulation</span>
+            </div>
+            <div>
+              <span>RoboCup@Home</span>
+              <span>Open Platform</span>
+              <span>Domestic Standard Platform</span>
+              <span>Social Standard Platform</span>
+            </div>
+            <div>
+              <span>RoboCupIndustrial</span>
+              <span>RoboCup@Work</span>
+              <span>Logistics</span>
+            </div>
+            <div>
+              <span>RoboCupJunior</span>
+              <span>Soccer</span>
+              <span>OnStage</span>
+              <span>Rescue</span>
+            </div>
+          </div>
+          <div>
+            <span className="menu__header">로보컵 이벤트</span>
+            <span>2024 제 n회 창의코딩대회</span>
+            <span>기록</span>
+          </div>
+          <div>
+            <span className="menu__header">공지사항</span>
+            <span>이벤트 일정</span>
+            <span>리그 규정</span>
           </div>
         </div>
-        <div className="">
+
+        <div className="institute__logo--wrapper">
           <img src={ministryLogo} className="institute__logo"></img>
           <img src={serviceLogo} className="institute__logo"></img>
           <img src={commissionLogo} className="institute__logo"></img>

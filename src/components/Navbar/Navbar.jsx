@@ -276,10 +276,10 @@ export default function Navbar() {
                 }
               >
                 <DropdownItems to="/event/archive" onClick={closeAll}>
-                  대회 일정
+                  이벤트 일정
                 </DropdownItems>
                 <DropdownItems to="/event/archive" onClick={closeAll}>
-                  경기 규정
+                  리그 규정
                 </DropdownItems>
               </div>
             </li>

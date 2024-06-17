@@ -5,11 +5,34 @@
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 
   .league__logo {
+    &--wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
     height: 70px;
   }
 
   .institute__logo {
     height: 40px;
+
+    &--wrapper {
+      display: flex;
+      // flex-direction: column;
+    }
+  }
+
+  &-nav {
+    display: flex;
+
+    .menu {
+      &__header {
+        display: block;
+      }
+      &__item {
+        display: block;
+      }
+    }
   }
 
   &__bottom {

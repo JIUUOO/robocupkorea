@@ -21,7 +21,7 @@ body {
 }
 
 .navbar {
-  position: absolute;
+  position: sticky;
   display: flex;
   align-items: center;
   width: 100%;
@@ -207,8 +207,24 @@ body {
 .footer .league__logo {
   height: 70px;
 }
+.footer .league__logo--wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .footer .institute__logo {
   height: 40px;
+}
+.footer .institute__logo--wrapper {
+  display: flex;
+}
+.footer-nav {
+  display: flex;
+}
+.footer-nav .menu__header {
+  display: block;
+}
+.footer-nav .menu__item {
+  display: block;
 }
 .footer__bottom {
   background-color: #010101;

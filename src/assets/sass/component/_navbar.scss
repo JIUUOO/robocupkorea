@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .navbar {
-  position: absolute;
+  position: sticky;
   display: flex;
   align-items: center;
   width: 100%;
