@@ -219,16 +219,40 @@ body {
 }
 .footer-nav {
   display: flex;
+  justify-content: space-evenly;
   list-style-type: none;
+}
+@media (max-width: 900px) {
+  .footer-nav {
+    flex-direction: column;
+  }
+}
+.footer-nav a {
+  text-decoration: none;
+}
+.footer-nav .menu__group {
+  display: block;
+  margin: 1rem;
+}
+.footer-nav .menu__group--nested {
+  display: flex;
+  flex-direction: row;
 }
 .footer-nav .menu__header {
   display: block;
+  font-weight: 500;
+  padding-bottom: 5px;
 }
 .footer-nav .menu__header--nested {
   display: block;
+  font-weight: 400;
+  padding: 5px 0;
 }
 .footer-nav .menu__item {
   display: block;
+  padding: 5px 0;
+  font-weight: 300;
+  color: #010101;
 }
 .footer__bottom {
   background-color: #010101;

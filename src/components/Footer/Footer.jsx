@@ -34,7 +34,7 @@ export default function Footer() {
           </a>
         </div>
         <ul className="footer-nav">
-          <li>
+          <li className="menu__group">
             <span className="menu__header">한국로보컵협회</span>
             <NavLink to="/association/about">
               <span className="menu__item">소개</span>
@@ -43,48 +43,88 @@ export default function Footer() {
               <span className="menu__item">운영위원</span>
             </NavLink>
           </li>
-          <li>
+          <li className="menu__group">
             <span className="menu__header">로보컵 리그</span>
             <div>
               <span className="menu__header--nested">RoboCupSoccer</span>
-              <span className="menu__item">Humanoid</span>
-              <span className="menu__item">Standard Platform</span>
-              <span className="menu__item">Middle Size</span>
-              <span className="menu__item">Small Size</span>
-              <span className="menu__item">Simulation</span>
+              <NavLink to="/">
+                <span className="menu__item">Humanoid</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">Standard Platform</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">Middle Size</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">Small Size</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">Simulation</span>
+              </NavLink>
             </div>
             <div>
               <span className="menu__header--nested">RoboCupRescue</span>
-              <span className="menu__item">Robot</span>
-              <span className="menu__item">Simulation</span>
+              <NavLink to="/">
+                <span className="menu__item">Robot</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">Simulation</span>
+              </NavLink>
             </div>
+          </li>
+          <li className="menu__group">
             <div>
               <span className="menu__header--nested">RoboCup@Home</span>
-              <span className="menu__item">Open Platform</span>
-              <span className="menu__item">Domestic Standard Platform</span>
-              <span className="menu__item">Social Standard Platform</span>
+              <NavLink to="/">
+                <span className="menu__item">Open Platform</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">Domestic Standard Platform</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">Social Standard Platform</span>
+              </NavLink>
             </div>
             <div>
               <span className="menu__header--nested">RoboCupIndustrial</span>
-              <span className="menu__item">RoboCup@Work</span>
-              <span className="menu__item">Logistics</span>
+              <NavLink to="/">
+                <span className="menu__item">RoboCup@Work</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">Logistics</span>
+              </NavLink>
             </div>
             <div>
               <span className="menu__header--nested">RoboCupJunior</span>
-              <span className="menu__item">Soccer</span>
-              <span className="menu__item">OnStage</span>
-              <span className="menu__item">Rescue</span>
+              <NavLink to="/">
+                <span className="menu__item">Soccer</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">OnStage</span>
+              </NavLink>
+              <NavLink to="/">
+                <span className="menu__item">Rescue</span>
+              </NavLink>
             </div>
           </li>
-          <li>
+          <li className="menu__group">
             <span className="menu__header">로보컵 이벤트</span>
-            <span className="menu__item">2024 제 n회 창의코딩대회</span>
-            <span className="menu__item">기록</span>
+            <NavLink to="/">
+              <span className="menu__item">2024 제 n회 창의코딩대회</span>
+            </NavLink>
+            <NavLink to="/">
+              <span className="menu__item">기록</span>
+            </NavLink>
           </li>
-          <li>
+          <li className="menu__group">
             <span className="menu__header">공지사항</span>
-            <span className="menu__item">이벤트 일정</span>
-            <span className="menu__item">리그 규정</span>
+            <NavLink to="/">
+              <span className="menu__item">이벤트 일정</span>
+            </NavLink>
+            <NavLink to="/">
+              <span className="menu__item">리그 규정</span>
+            </NavLink>
           </li>
         </ul>
 

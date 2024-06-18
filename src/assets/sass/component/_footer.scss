@@ -24,18 +24,45 @@
 
   &-nav {
     display: flex;
+    justify-content: space-evenly;
     list-style-type: none;
 
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
     .menu {
+      &__group {
+        display: block;
+        margin: 1rem;
+
+        &--nested {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+
       &__header {
         display: block;
+        font-weight: 500;
+        padding-bottom: 5px;
 
         &--nested {
           display: block;
+          font-weight: 400;
+          padding: 5px 0;
         }
       }
+
       &__item {
         display: block;
+        padding: 5px 0;
+        font-weight: 300;
+        color: $black;
       }
     }
   }
