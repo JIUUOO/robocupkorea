@@ -202,24 +202,30 @@ body {
 
 .footer {
   margin-top: 5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-.footer .league__logo {
-  height: 70px;
+.footer .league-logo {
+  height: 52px;
 }
-.footer .league__logo--wrapper {
+.footer .league-logo--wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.footer .institute-logo {
+  height: 34px;
+}
+.footer .institute-logo--wrapper {
   display: flex;
-  flex-direction: column;
 }
-.footer .institute__logo {
-  height: 40px;
+.footer .rcka-info {
+  padding-top: 3rem;
+  font-size: 14px;
 }
-.footer .institute__logo--wrapper {
-  display: flex;
+.footer .rcka-info--bold {
+  font-weight: 600;
 }
 .footer-nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   list-style-type: none;
 }
 @media (max-width: 900px) {
@@ -248,15 +254,21 @@ body {
   font-weight: 400;
   padding: 5px 0;
 }
+.footer-nav .menu__header--nested--wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
 .footer-nav .menu__item {
   display: block;
   padding: 5px 0;
+  font-size: 14px;
   font-weight: 300;
   color: #010101;
 }
 .footer__bottom {
   background-color: #010101;
-  padding: 1px 0 3px 0;
+  padding: 4px 0 6px 0;
+  height: auto;
 }
 .footer__bottom .container {
   display: flex;
@@ -272,9 +284,10 @@ body {
 }
 .footer__bottom .container .fa.fa-github {
   color: #ffffff;
+  font-size: 18px;
 }
 .footer__bottom .container div:last-child {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 200;
 }
 

@@ -2,29 +2,37 @@
 
 .footer {
   margin-top: 5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
 
-  .league__logo {
+  .league-logo {
     &--wrapper {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
-    height: 70px;
+    height: 52px;
   }
 
-  .institute__logo {
-    height: 40px;
-
+  .institute-logo {
     &--wrapper {
       display: flex;
       // flex-direction: column;
+    }
+
+    height: 34px;
+  }
+
+  .rcka-info {
+    padding-top: 3rem;
+    font-size: 14px;
+
+    &--bold {
+      font-weight: 600;
     }
   }
 
   &-nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style-type: none;
 
     @media (max-width: 900px) {
@@ -55,12 +63,18 @@
           display: block;
           font-weight: 400;
           padding: 5px 0;
+
+          &--wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          }
         }
       }
 
       &__item {
         display: block;
         padding: 5px 0;
+        font-size: 14px;
         font-weight: 300;
         color: $black;
       }
@@ -69,7 +83,8 @@
 
   &__bottom {
     background-color: $black;
-    padding: 1px 0 3px 0;
+    padding: 4px 0 6px 0;
+    height: auto;
 
     .container {
       display: flex;
@@ -84,10 +99,11 @@
 
       .fa.fa-github {
         color: $white;
+        font-size: 18px;
       }
 
       div:last-child {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 200;
       }
     }
