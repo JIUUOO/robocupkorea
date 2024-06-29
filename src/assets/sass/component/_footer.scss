@@ -3,6 +3,8 @@
 
 .footer {
   margin-top: 5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 1rem;
 }
 
 .footer__intro {
@@ -88,16 +90,10 @@
   }
 
   @include on-mobile {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .institute-logo {
-    height: 44px;
-
-    @media (max-width: $lg) {
-      order: 0;
-    }
-
     &--wrapper {
       display: flex;
       justify-content: flex-end;
@@ -108,6 +104,12 @@
       @include on-monitor {
         flex-direction: row;
       }
+    }
+
+    height: 44px;
+
+    @media (max-width: $lg) {
+      order: 0;
     }
   }
 
