@@ -204,78 +204,117 @@ body {
   margin-top: 5rem;
 }
 
-.footer-intro .league-logo {
+.footer__intro {
+  margin-bottom: 1.2rem;
+}
+.footer__intro .league-logo {
   height: 54px;
+  margin-right: 5px;
 }
-.footer-intro .league-logo--wrapper {
+.footer__intro .league-logo--wrapper {
   display: flex;
-  margin-right: 5rem;
+  margin-right: 1vw;
 }
-.footer-intro .logo--wrapper {
+.footer__intro .logo--wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.footer__intro .league-description {
+  max-width: 380px;
 }
 
-.institute-logo {
-  height: 44px;
-}
-.institute-logo--wrapper {
-  display: flex;
-}
-@media (max-width: 768px) {
-  .institute-logo--wrapper {
-    flex-direction: column;
-  }
-}
-@media (min-width: 768px) {
-  .institute-logo--wrapper {
-    flex-direction: row;
-  }
-}
-
-.rcka-info {
-  font-size: 14px;
-}
-.rcka-info--bold {
-  font-weight: 600;
-}
-
-.footer-nav .menu__header {
+.footer__nav .menu__header {
   font-weight: 500;
   padding: 5px 0;
 }
-.footer-nav .nav-grid {
+.footer__nav .nav-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
+.footer__nav .nav-grid:last-child {
+  margin-bottom: 1.2rem;
+}
 @media (max-width: 1024px) {
-  .footer-nav .nav-grid {
+  .footer__nav .nav-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (max-width: 640px) {
-  .footer-nav .nav-grid {
+  .footer__nav .nav-grid {
     grid-template-columns: 1fr;
   }
 }
-.footer-nav .nav-grid .menu__wrapper {
+.footer__nav .nav-grid .menu__wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.footer-nav .nav-grid .menu__header--nested {
+.footer__nav .nav-grid .menu__header--nested {
   font-weight: 400;
   padding: 5px 0;
 }
-.footer-nav .nav-grid .menu__item {
+.footer__nav .nav-grid .menu__item {
   padding: 5px 0;
   font-size: 14px;
   font-weight: 300;
   color: #010101;
   text-decoration: none;
 }
-.footer-nav .nav-grid .menu__item:hover {
+.footer__nav .nav-grid .menu__item:hover {
   text-decoration: underline;
+}
+
+.footer__outro {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 1024px) {
+  .footer__outro {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 768px) {
+  .footer__outro {
+    align-items: flex-start;
+  }
+}
+.footer__outro .institute-logo {
+  height: 44px;
+}
+@media (max-width: 1024px) {
+  .footer__outro .institute-logo {
+    order: 0;
+  }
+}
+.footer__outro .institute-logo--wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .footer__outro .institute-logo--wrapper {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  .footer__outro .institute-logo--wrapper {
+    flex-direction: row;
+  }
+}
+.footer__outro .rcka-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+@media (max-width: 1024px) {
+  .footer__outro .rcka-info {
+    order: 1;
+  }
+}
+.footer__outro .rcka-info--bold {
+  font-weight: 600;
 }
 
 .footer__bottom {
@@ -290,18 +329,13 @@ body {
   align-items: center;
   color: #ffffff;
 }
-@media (max-width: 640px) {
-  .footer__bottom .container {
-    flex-direction: column;
-  }
-}
 .footer__bottom .container .fa.fa-github {
   color: #ffffff;
   font-size: 18px;
 }
 .footer__bottom .container div:last-child {
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .home-media {

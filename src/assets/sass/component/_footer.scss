@@ -5,46 +5,31 @@
   margin-top: 5rem;
 }
 
-.footer-intro {
+.footer__intro {
+  margin-bottom: 1.2rem;
+
   .league-logo {
     height: 54px;
+    margin-right: 5px;
 
     &--wrapper {
       display: flex;
-      margin-right: 5rem;
+      margin-right: calc(1vw);
     }
   }
 
   .logo--wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .league-description {
+    max-width: 380px;
   }
 }
 
-.institute-logo {
-  height: 44px;
-
-  &--wrapper {
-    display: flex;
-
-    @include on-mobile {
-      flex-direction: column;
-    }
-    @include on-monitor {
-      flex-direction: row;
-    }
-  }
-}
-
-.rcka-info {
-  font-size: 14px;
-
-  &--bold {
-    font-weight: 600;
-  }
-}
-
-.footer-nav {
+.footer__nav {
   .menu__header {
     font-weight: 500;
     padding: 5px 0;
@@ -53,6 +38,10 @@
   .nav-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    &:last-child {
+      margin-bottom: 1.2rem;
+    }
 
     @media (max-width: $lg) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -88,6 +77,55 @@
   }
 }
 
+.footer__outro {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: $lg) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @include on-mobile {
+    align-items: flex-start;
+  }
+
+  .institute-logo {
+    height: 44px;
+
+    @media (max-width: $lg) {
+      order: 0;
+    }
+
+    &--wrapper {
+      display: flex;
+      justify-content: flex-end;
+
+      @include on-mobile {
+        flex-direction: column;
+      }
+      @include on-monitor {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .rcka-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+
+    @media (max-width: $lg) {
+      order: 1;
+    }
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+}
+
 .footer__bottom {
   background-color: $black;
   padding: 4px 0 6px 0;
@@ -100,9 +138,9 @@
     align-items: center;
     color: $white;
 
-    @media (max-width: $sm) {
-      flex-direction: column;
-    }
+    // @media (max-width: $sm) {
+    //   flex-direction: column;
+    // }
 
     .fa.fa-github {
       color: $white;
@@ -111,7 +149,7 @@
 
     div:last-child {
       font-size: 12px;
-      font-weight: 200;
+      font-weight: 300;
     }
   }
 }

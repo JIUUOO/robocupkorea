@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function Nav() {
   return (
     <div className="container">
-      <div className="footer-nav">
+      <div className="footer__nav">
         <div className="nav-grid">
           <div className="menu__wrapper">
             <div className="menu__header">한국로보컵협회</div>
@@ -33,9 +33,7 @@ export default function Nav() {
             </NavLink>
           </div>
         </div>
-        <div className="menu__header" style={{ paddingTop: "16px" }}>
-          로보컵 리그
-        </div>
+        <div className="menu__header">로보컵 리그</div>
         <div className="nav-grid">
           <div className="menu__wrapper">
             <div className="menu__header--nested">RoboCupSoccer</div>

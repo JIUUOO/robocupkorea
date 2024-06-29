@@ -8,7 +8,7 @@ import robocupAsiaPacific from "../../assets/images/logo/robocup-asia-pacific.pn
 export default function Intro() {
   return (
     <div className="container">
-      <div className="footer-intro">
+      <div className="footer__intro">
         <div className="logo--wrapper">
           <div>
             <NavLink to={"/"}>
@@ -45,7 +45,7 @@ export default function Intro() {
             </div>
           </div>
         </div>
-        <div style={{ maxWidth: "380px" }}>
+        <div className="league-description">
           사단법인 한국로보컵협회(이하 RCKA)는 로봇을 연구하는 학생들을 위해
           국가적 및 국제적 로봇 이벤트를 주최하는 프로젝트 중심의 교육 증진
           운동입니다.
