@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
@@ -13,7 +16,7 @@ body {
   padding: 0;
 }
 
-.container {
+.container--custom {
   width: 100%;
   max-width: 1408px;
   padding: 0 16px;

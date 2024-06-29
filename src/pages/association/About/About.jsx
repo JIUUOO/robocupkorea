@@ -3,7 +3,7 @@ import robotNews from "../../../assets/images/logo/robot-news.png";
 export default function About() {
   return (
     <div className="about">
-      <div className="container pt-16">
+      <div className="container">
         <h1 className="text-3xl pb-5">한국로보컵협회를 소개합니다</h1>
         <div className="flex justify-center items-center">
           <iframe

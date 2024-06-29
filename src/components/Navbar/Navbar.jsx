@@ -30,7 +30,7 @@ export default function Navbar() {
   //   console.log(location.pathname);
   return (
     <nav className={click ? "navbar navbar--fixed" : "navbar"}>
-      <div className="container">
+      <div className="container--custom">
         <div className="navbar-wrapper">
           <NavLink
             to={"/"}

@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./hooks/ScrollToTop/ScrollToTop";
 import Home from "./pages/Home/Home";
-import About from "./pages/association/about";
+import About from "./pages/association/About/About";
 import Committee from "./pages/association/committee";
 import RoboCupSoccer from "./pages/leagues/robocup-soccer";
 import RoboCupRescue from "./pages/leagues/robocup-rescue";
