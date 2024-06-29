@@ -203,68 +203,81 @@ body {
 .footer {
   margin-top: 5rem;
 }
-.footer .league-logo {
-  height: 52px;
+
+.footer-intro .league-logo {
+  height: 54px;
 }
-.footer .league-logo--wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.footer .institute-logo {
-  height: 34px;
-}
-.footer .institute-logo--wrapper {
+.footer-intro .league-logo--wrapper {
   display: flex;
+  margin-right: 5rem;
 }
-.footer .rcka-info {
-  padding-top: 3rem;
-  font-size: 14px;
-}
-.footer .rcka-info--bold {
-  font-weight: 600;
-}
-.footer-nav {
+.footer-intro .logo--wrapper {
   display: flex;
   justify-content: space-between;
-  list-style-type: none;
 }
-@media (max-width: 900px) {
-  .footer-nav {
+
+.institute-logo {
+  height: 44px;
+}
+.institute-logo--wrapper {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .institute-logo--wrapper {
     flex-direction: column;
   }
 }
-.footer-nav a {
-  text-decoration: none;
+@media (min-width: 768px) {
+  .institute-logo--wrapper {
+    flex-direction: row;
+  }
 }
-.footer-nav .menu__group {
-  display: block;
-  margin: 1rem;
+
+.rcka-info {
+  font-size: 14px;
 }
-.footer-nav .menu__group--nested {
-  display: flex;
-  flex-direction: row;
+.rcka-info--bold {
+  font-weight: 600;
 }
+
 .footer-nav .menu__header {
-  display: block;
   font-weight: 500;
-  padding-bottom: 5px;
-}
-.footer-nav .menu__header--nested {
-  display: block;
-  font-weight: 400;
   padding: 5px 0;
 }
-.footer-nav .menu__header--nested--wrapper {
+.footer-nav .nav-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-.footer-nav .menu__item {
-  display: block;
+@media (max-width: 1024px) {
+  .footer-nav .nav-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .footer-nav .nav-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.footer-nav .nav-grid .menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-nav .nav-grid .menu__header--nested {
+  font-weight: 400;
+  padding: 5px 0;
+}
+.footer-nav .nav-grid .menu__item {
   padding: 5px 0;
   font-size: 14px;
   font-weight: 300;
   color: #010101;
+  text-decoration: none;
 }
+.footer-nav .nav-grid .menu__item:hover {
+  text-decoration: underline;
+}
+
 .footer__bottom {
   background-color: #010101;
   padding: 4px 0 6px 0;
@@ -277,7 +290,7 @@ body {
   align-items: center;
   color: #ffffff;
 }
-@media (max-width: 340px) {
+@media (max-width: 640px) {
   .footer__bottom .container {
     flex-direction: column;
   }

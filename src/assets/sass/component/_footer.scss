@@ -1,111 +1,117 @@
 @use "../base/base" as *;
+@use "../abstracts/mixins" as *;
 
 .footer {
   margin-top: 5rem;
+}
 
+.footer-intro {
   .league-logo {
+    height: 54px;
+
     &--wrapper {
-      display: grid;
+      display: flex;
+      margin-right: 5rem;
+    }
+  }
+
+  .logo--wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.institute-logo {
+  height: 44px;
+
+  &--wrapper {
+    display: flex;
+
+    @include on-mobile {
+      flex-direction: column;
+    }
+    @include on-monitor {
+      flex-direction: row;
+    }
+  }
+}
+
+.rcka-info {
+  font-size: 14px;
+
+  &--bold {
+    font-weight: 600;
+  }
+}
+
+.footer-nav {
+  .menu__header {
+    font-weight: 500;
+    padding: 5px 0;
+  }
+
+  .nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    @media (max-width: $lg) {
       grid-template-columns: 1fr 1fr 1fr;
     }
 
-    height: 52px;
-  }
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr;
+    }
 
-  .institute-logo {
-    &--wrapper {
+    .menu__wrapper {
       display: flex;
-      // flex-direction: column;
+      flex-direction: column;
+      align-items: flex-start;
+      // margin-top: auto;
     }
 
-    height: 34px;
-  }
+    .menu__header--nested {
+      font-weight: 400;
+      padding: 5px 0;
+    }
 
-  .rcka-info {
-    padding-top: 3rem;
-    font-size: 14px;
+    .menu__item {
+      padding: 5px 0;
+      font-size: 14px;
+      font-weight: 300;
+      color: $black;
+      text-decoration: none;
 
-    &--bold {
-      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
+}
 
-  &-nav {
+.footer__bottom {
+  background-color: $black;
+  padding: 4px 0 6px 0;
+  height: auto;
+
+  .container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    list-style-type: none;
+    align-items: center;
+    color: $white;
 
-    @media (max-width: 900px) {
+    @media (max-width: $sm) {
       flex-direction: column;
     }
 
-    a {
-      text-decoration: none;
-    }
-
-    .menu {
-      &__group {
-        display: block;
-        margin: 1rem;
-
-        &--nested {
-          display: flex;
-          flex-direction: row;
-        }
-      }
-
-      &__header {
-        display: block;
-        font-weight: 500;
-        padding-bottom: 5px;
-
-        &--nested {
-          display: block;
-          font-weight: 400;
-          padding: 5px 0;
-
-          &--wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-          }
-        }
-      }
-
-      &__item {
-        display: block;
-        padding: 5px 0;
-        font-size: 14px;
-        font-weight: 300;
-        color: $black;
-      }
-    }
-  }
-
-  &__bottom {
-    background-color: $black;
-    padding: 4px 0 6px 0;
-    height: auto;
-
-    .container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+    .fa.fa-github {
       color: $white;
+      font-size: 18px;
+    }
 
-      @media (max-width: $sm) {
-        flex-direction: column;
-      }
-
-      .fa.fa-github {
-        color: $white;
-        font-size: 18px;
-      }
-
-      div:last-child {
-        font-size: 12px;
-        font-weight: 200;
-      }
+    div:last-child {
+      font-size: 12px;
+      font-weight: 200;
     }
   }
 }
