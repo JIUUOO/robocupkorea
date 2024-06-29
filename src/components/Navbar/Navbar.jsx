@@ -83,7 +83,10 @@ export default function Navbar() {
                   onMouseEnter={() => setToggleNestedDropdown("soccer")}
                   onMouseLeave={() => setToggleNestedDropdown(null)}
                 >
-                  <DropdownToggler nested={true}>RoboCupSoccer</DropdownToggler>
+                  <DropdownToggler nested={true}>
+                    RoboCupSoccer&nbsp;
+                    <i class="fas fa-solid fa-angle-right"></i>
+                  </DropdownToggler>
                   <div
                     className={
                       toggleNestedDropdown === "soccer"
@@ -127,7 +130,10 @@ export default function Navbar() {
                   onMouseEnter={() => setToggleNestedDropdown("rescue")}
                   onMouseLeave={() => setToggleNestedDropdown(null)}
                 >
-                  <DropdownToggler nested={true}>RoboCupRescue</DropdownToggler>
+                  <DropdownToggler nested={true}>
+                    RoboCupRescue&nbsp;
+                    <i class="fas fa-solid fa-angle-right"></i>
+                  </DropdownToggler>
                   <div
                     className={
                       toggleNestedDropdown === "rescue"
@@ -153,7 +159,10 @@ export default function Navbar() {
                   onMouseEnter={() => setToggleNestedDropdown("athome")}
                   onMouseLeave={() => setToggleNestedDropdown(null)}
                 >
-                  <DropdownToggler nested={true}>RoboCup@Home</DropdownToggler>
+                  <DropdownToggler nested={true}>
+                    RoboCup@Home&nbsp;
+                    <i class="fas fa-solid fa-angle-right"></i>
+                  </DropdownToggler>
                   <div
                     className={
                       toggleNestedDropdown === "athome"
@@ -186,7 +195,8 @@ export default function Navbar() {
                   onMouseLeave={() => setToggleNestedDropdown(null)}
                 >
                   <DropdownToggler nested={true}>
-                    RoboCupIndustrial
+                    RoboCupIndustrial&nbsp;
+                    <i class="fas fa-solid fa-angle-right"></i>
                   </DropdownToggler>
                   <div
                     className={
@@ -213,7 +223,10 @@ export default function Navbar() {
                   onMouseEnter={() => setToggleNestedDropdown("junior")}
                   onMouseLeave={() => setToggleNestedDropdown(null)}
                 >
-                  <DropdownToggler nested={true}>RoboCupJunior</DropdownToggler>
+                  <DropdownToggler nested={true}>
+                    RoboCupJunior&nbsp;
+                    <i class="fas fa-solid fa-angle-right"></i>
+                  </DropdownToggler>
                   <div
                     className={
                       toggleNestedDropdown === "junior"

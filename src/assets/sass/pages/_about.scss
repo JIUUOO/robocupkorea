@@ -1,1 +1,12 @@
 @use "../base/base" as *;
+
+.about {
+  .embed-video {
+    width: 100%;
+    height: 100%;
+
+    &--wrapper {
+      display: flex;
+    }
+  }
+}
